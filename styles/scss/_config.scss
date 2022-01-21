@@ -10,4 +10,32 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: black;
+    // background: black url('../../src/images/logo.png') no-repeat fixed center ;
+}
+
+
+
+img{
+    width: 100%;
+}
+
+
+.title{
+    top: 1rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    
+    h1{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    @media screen and (max-width:750px) {
+        font-size: 1rem;
+    }
 }

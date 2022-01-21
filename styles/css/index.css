@@ -15,5 +15,39 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+  background: black;
+}
+
+img {
+  width: 100%;
+}
+
+.title {
+  top: 1rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+}
+
+.title h1 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 750px) {
+  .title {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */
