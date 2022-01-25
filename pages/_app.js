@@ -1,4 +1,5 @@
 import '../styles/css/index.css'
+import "animate.css"
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />

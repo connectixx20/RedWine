@@ -1,0 +1,11 @@
+We are using Framer Motion  for animation
+
+and for parallax we are using rellax.js
+
+
+1. Framer Motion :-
+
+we have to import Motion fro the Framer Motion
+
+e.g
+

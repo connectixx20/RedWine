@@ -1,41 +1,49 @@
-*{
-    margin: 0;
-	padding: 0;
-	border: 0;
-	
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Playfair+Display:ital@0;1&family=Raleway&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: black;
-    // background: black url('../../src/images/logo.png') no-repeat fixed center ;
+$primary-color: #961313;
+$secondary-color: #fff;
+
+@mixin primary-text {
+  font-family: "Playfair Display", serif;
 }
 
-
-
-img{
-    width: 100%;
+body {
+  background: #000;
+  color: white;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-.title{
-    top: 1rem;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    
-    h1{
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    @media screen and (max-width:750px) {
-        font-size: 1rem;
-    }
+@mixin center_element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin nvabar_links {
+  background-image: linear-gradient(
+    to right bottom,
+    #961313,
+    #bd4f67,
+    #cf8cae,
+    #dec8e1,
+    #ffffff
+  );
+}
+
+@mixin silver-text {
+  background: linear-gradient(#d124ff, #ff2a2a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
