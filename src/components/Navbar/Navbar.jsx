@@ -145,7 +145,7 @@ const Navbar = () => {
                                 {data?.isSubmenu & data?.id === d.id ? (
                                     <motion.ul className={`${data.className} animate__animated animate__zoomIn`} transition={{ type: "spring", duration: 2 }} onMouseIn={() => setSubMenu(d.id)}>
                                         {data.subLink.map((d) => (
-                                            <li>
+                                            <li key={d.mame}>
                                                 <motion.div whileHover={{ scale: 1.1, y: -5, x: width < 850 ? -15 : 15, color: '#D12FEB' }} transition={{ type: 'spring', stiffness: 100 }} >
                                                     <Link passHref href={`/${d.redirect}`}>
                                                         <h3>{d.mame}</h3>
