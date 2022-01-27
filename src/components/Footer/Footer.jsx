@@ -15,10 +15,22 @@ const Footer = () => {
     
     
     const icons = [
-        <FaInstagram />,
-        <FaFacebook />,
-        <FaLinkedin />,
-        <FaTwitter />
+        { 
+            id: 1,
+            data: <FaInstagram />,
+        },
+        {
+            id: 2,
+            data:  <FaFacebook />,
+        },
+        {
+            id: 3,
+            data: <FaLinkedin />,
+        },
+        {
+            id: 4,
+            data: <FaTwitter />
+        }
     ]
     
     const linkVariant = {
@@ -71,9 +83,9 @@ const Footer = () => {
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias maxime, quod, ad dolorum laborum iure cum aut totam suscipit, voluptatum cumque repellendus eum esse corrupti obcaecati architecto tempora sed!</p>
                     <motion.div className="redwine__footer-detail__social" variants={linkVariant} initial="hidden" animate={animation} >
                         {icons.map((d) => (
-                            <motion.a href="#" target="_blank" variants={itemVariant}>
+                            <motion.a href="#" target="_blank" variants={itemVariant} key={d.id}>
                                 <motion.div whileHover={{ x: 5, y: -5, color: "red" }} transition={{ type: "spring", stiffness: 300 }}>
-                                    {d}
+                                    {d.data}
                                 </motion.div>
                             </motion.a>
                         ))}
@@ -102,7 +114,7 @@ const Footer = () => {
                         </div>
                         <motion.div variants={linkVariant} initial="hidden" animate={animation}>
                             {influencerLinks.map((d) => (
-                                <motion.div variants={itemVariant} >
+                                <motion.div variants={itemVariant}  key={d.name}>
                                     <Link href={`/${d.url}`} key={d.name}>
                                         <motion.h4 whileHover={{ color: "red", x: 20, y: -5, scale: 1.2 }}>{d.name}</motion.h4>
                                     </Link>
