@@ -99,8 +99,8 @@ const Footer = () => {
                         </div>
                         <motion.div variants={linkVariant} initial="hidden" animate={animation}>
                             {quickLinks.map((d) => (
-                                <motion.div variants={itemVariant} >
-                                    <Link href={`/${d.url}`} key={d.name}>
+                                <motion.div variants={itemVariant} key={d.name}>
+                                    <Link href={`/${d.url}`} >
                                         <motion.h4 whileHover={{ color: "red", x: 20, y: -5, scale: 1.2 }}>{d.name}</motion.h4>
                                     </Link>
                                 </motion.div>
@@ -115,7 +115,7 @@ const Footer = () => {
                         <motion.div variants={linkVariant} initial="hidden" animate={animation}>
                             {influencerLinks.map((d) => (
                                 <motion.div variants={itemVariant}  key={d.name}>
-                                    <Link href={`/${d.url}`} key={d.name}>
+                                    <Link href={`/${d.url}`} >
                                         <motion.h4 whileHover={{ color: "red", x: 20, y: -5, scale: 1.2 }}>{d.name}</motion.h4>
                                     </Link>
                                 </motion.div>
@@ -129,8 +129,8 @@ const Footer = () => {
                         </div>
                         <motion.div variants={linkVariant} initial="hidden" animate={animation}>
                             {serviceLinks.map((d) => (
-                                <motion.div variants={itemVariant} >
-                                    <Link href={`/${d.url}`} key={d.name}>
+                                <motion.div variants={itemVariant}  key={d.name}>
+                                    <Link href={`/${d.url}`} >
                                         <motion.h4 whileHover={{ color: "red", x: 20, y: -5, scale: 1.2 }}>{d.name}</motion.h4>
                                     </Link>
                                 </motion.div>
