@@ -29,9 +29,9 @@ a {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: -2rem;
+  top: -1rem;
 }
 
 .redwine__navbar-links {
@@ -138,6 +138,7 @@ a {
 }
 
 .redwine__navbar-register {
+  font-family: "Playfair Display", serif;
   padding: 0.8rem 1rem;
   cursor: pointer;
   border-radius: 1.5rem;
@@ -296,6 +297,255 @@ a {
   }
   .redwine__navbar-hamburger svg {
     font-size: 2rem;
+  }
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #4b0404;
+}
+
+.redwine__footer {
+  margin-top: 6rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 3rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: "Playfair Display", serif;
+}
+
+.redwine__footer-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 70%;
+  padding: 0 5rem 0 0;
+}
+
+.redwine__footer-detail p {
+  margin: 1rem 0;
+}
+
+.redwine__footer-detail__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 12rem;
+  margin-top: 1rem;
+}
+
+.redwine__footer-detail__social svg {
+  font-size: 2rem;
+}
+
+.redwine__footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: 100%;
+}
+
+.redwine__footer-links h4 {
+  cursor: pointer;
+}
+
+.redwine__footer-links__content {
+  margin-bottom: 1rem;
+}
+
+.redwine__footer-links__content-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.redwine__footer-links__content-heading span {
+  margin-top: .3rem;
+  width: 4rem;
+  height: .2rem;
+  background: #961313;
+}
+
+.redwine__footer-links__content h4 {
+  margin-top: .7rem;
+}
+
+.redwine__footer-links__influencer {
+  margin-bottom: 1rem;
+}
+
+.redwine__footer-links__influencer-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.redwine__footer-links__influencer-heading span {
+  margin-top: .3rem;
+  width: 4rem;
+  height: .2rem;
+  background: #961313;
+}
+
+.redwine__footer-links__influencer h4 {
+  margin-top: .7rem;
+}
+
+.redwine__footer-links__services {
+  margin-top: 1rem;
+}
+
+.redwine__footer-links__services-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.redwine__footer-links__services-heading span {
+  margin-top: .3rem;
+  width: 3rem;
+  height: .2rem;
+  background: #961313;
+}
+
+.redwine__footer-links__services h4 {
+  margin-top: .7rem;
+}
+
+@media screen and (max-width: 850px) {
+  .redwine__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .redwine__footer > * {
+    margin-bottom: 1rem;
+  }
+  .redwine__footer-detail {
+    width: 100%;
+    padding-right: 1rem;
+  }
+  .redwine__footer-links {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .redwine__footer-links > * {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .redwine__footer {
+    padding: 1rem;
+    font-size: .9rem;
   }
 }
 /*# sourceMappingURL=index.css.map */

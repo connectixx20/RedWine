@@ -3,9 +3,9 @@
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   width: 100%;
-  top: -2rem;
+  top: -1rem;
 
   &-links {
     display: flex;
@@ -91,6 +91,7 @@
   }
 
   &-register {
+    @include primary-text;
     padding: 0.8rem 1rem;
     // background: $secondary-color;
 
@@ -205,6 +206,13 @@
       }
     }
   }
+}
+
+.sticky{
+  position: sticky;
+  top: 0;
+  background: #4b0404;
+  
 }
 
 // Navbar 2

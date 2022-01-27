@@ -1,6 +1,6 @@
 
 import Head from 'next/head'
-import { Navbar } from '.'
+import { Navbar,Footer } from '.'
 
 const Layout = ({ title, children, description }) => {
     
@@ -16,7 +16,7 @@ const Layout = ({ title, children, description }) => {
             <main >
                 {children}
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     )
 }

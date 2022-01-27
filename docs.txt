@@ -9,3 +9,5 @@ we have to import Motion fro the Framer Motion
 
 e.g
 
+for using react-intersection-observer with Framer Motion:-
+https://javascript.plainenglish.io/animate-when-element-is-in-view-with-framer-motion-63b254403bf

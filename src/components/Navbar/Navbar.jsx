@@ -1,80 +1,47 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from 'framer-motion'
+import { links } from "../../db/data";
 import { useEffect, useState } from "react";
-import { FaTimes, FaAlignRight, FaPlus, FaMinus, FaCaretLeft } from 'react-icons/fa'
+import { FaTimes, FaAlignRight, FaCaretLeft } from 'react-icons/fa'
 
 const Navbar = () => {
     const [subMenu, setSubMenu] = useState(null);
     const [width, setWidth] = useState(0);
-    const links = [
-        {
-            id: 0,
-            name: "About",
-            redirect: "about"
+    const [headerScroll, setHeaderScroll] = useState(0);
+    const linkVariant = {
+        hidden: {
+            opacity: 0
         },
-        {
-            id: 1,
-            name: "Influencer",
-            redirect: "influencer",
-            isSubmenu: true,
-            className: "submenu1",
-            subLink: [
-                {
-                    mame: "Linkedin",
-                    redirect: "influencer/linkedin"
-                },
-                {
-                    mame: "Facebook",
-                    redirect: "influencer/facebook"
-                },
-                {
-                    mame: "Instagram",
-                    redirect: "influencer/instagram"
-                },
-                {
-                    mame: "Youtube",
-                    redirect: "influencer/youtube"
-                },
-            ]
-        },
-        {
-            id: 2,
-            name: "Contact",
-            redirect: "contact"
-        },
-        // {
-        //     id: 3,
-        //     name: "Register",
-        //     redirect: "register"
-        // },
-        {
-            id: 3,
-            name: "Services",
-            redirect: "Services",
-            isSubmenu: true,
-            className: "submenu2",
-            subLink: [
-                {
-                    mame: "Social Media Marketing",
-                    redirect: "services/social"
-                },
-                {
-                    mame: "Youtube Marketing",
-                    redirect: "services/youtube"
-                },
-                {
-                    mame: "Software Development",
-                    redirect: "services/software"
-                },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.5
+            }
+        }
+    }
 
-            ]
+    const itemVariant = {
+        hidden: {
+            opacity: 0,
+            x: width < 650 ? -50 : 50
         },
-    ]
+        show: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.8,
+                type: "spring",
+                stiffness: 300
+            },
+        }
+
+    }
 
     useEffect(() => {
         setWidth(window.innerWidth)
     }, [width, subMenu])
+
     const data = links[subMenu]
 
     const [openHamburger, setOpenHamburger] = useState(false);
@@ -89,12 +56,22 @@ const Navbar = () => {
     useEffect(() => {
 
     }, [changeplus, openHamburger])
-    console.log({ openHamburger })
+
+
+    const handleScroll=()=>{
+        const post=window.pageYOffset
+        setHeaderScroll(post)
+    }
+    
+    useEffect(() => {
+        window.addEventListener("scroll",handleScroll)
+    }, [headerScroll])
+    
     return (
-        <header className="redwine__navbar">
+        <header className={`redwine__navbar ${headerScroll > 10 && "sticky"}`}>
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ ease: "easeIn", duration: .3 }} className="redwine__navbar-logo" whileHover={{ scale: 1.1 }} >
                 <Link passHref href={"/"}>
-                    <Image src={"https://res.cloudinary.com/dykwfe4cr/image/upload/v1642744232/logo_upg6p6.png"} width={width < 600 ? 250 : 300} height={width < 600 ? 150 : 200} objectFit="cover" />
+                    <Image src={"https://res.cloudinary.com/dykwfe4cr/image/upload/v1642744232/logo_upg6p6.png"} width={width < 600 ? 250 : headerScroll > 10 ? 250 : 300} height={width < 600 ? 150 : headerScroll > 10 ? 100 : 150} objectFit="cover" alt="RedWine" />
                 </Link>
             </motion.div>
             <div className="redwine__navbar-hamburger">
@@ -112,9 +89,9 @@ const Navbar = () => {
                 }
             </div>
             {(width < 850 ? openHamburger : true) && (
-                <motion.ul className="redwine__navbar-links" transition={{ staggerChildren: 3 }}  >
+                <motion.ul className="redwine__navbar-links" variants={linkVariant} initial="hidden" animate="show">
                     {links.map((d, i) => (
-                        <motion.li className="redwine__navbar-links__item" key={d.name} onMouseOver={() => setSubMenu(d.id)} onMouseOut={() => data?.isSubmenu ? null : setSubMenu(null)} initial={{ x: -40 }} animate={{ x: 0 }} >
+                        <motion.li className="redwine__navbar-links__item" key={d.name} onMouseOver={() => setSubMenu(d.id)} onMouseOut={() => data?.isSubmenu ? null : setSubMenu(null)} variants={itemVariant} >
                             <>
                                 <motion.div className="item" onMouseOver={() => d?.id === data?.id && setChangeplus(true)} onMouseOut={() => setChangeplus(false)} >
                                     {/* {width < 850 & d.isSubmenu && (
@@ -164,8 +141,8 @@ const Navbar = () => {
                         </motion.li>
                     ))}
                     {
-                        width<850 && (
-                            <motion.div className="redwine__navbar-links__register" initial={{scale:0}} animate={{scale:1}} whileTap={{scale:1.1}}>
+                        width < 850 && (
+                            <motion.div className="redwine__navbar-links__register" initial={{ scale: 0 }} animate={{ scale: 1 }} whileTap={{ scale: 1.1 }}>
                                 <Link href={"/register"} passHref>
                                     <h3>Register</h3>
                                 </Link>

@@ -1,0 +1,136 @@
+.redwine__footer{
+    margin-top: 6rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 3rem;
+    overflow: hidden;
+    @include center_element;
+    justify-content: space-between;
+    @include primary-text;
+    &-detail{
+        @include center_element;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 70%;
+        padding: 0 5rem 0 0 ;
+
+        p{
+            margin: 1rem 0;
+            // width: 20rem
+        }
+
+        &__social{
+            @include center_element;
+            justify-content: space-between;
+            width: 12rem;
+            margin-top: 1rem;
+            
+
+            svg{
+                font-size: 2rem;
+            }
+        }
+    }
+    &-links{
+        @include center_element;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+
+        h4{
+            cursor: pointer;
+        }
+        
+        &__content{
+
+            margin-bottom: 1rem;
+            &-heading{
+                @include center_element;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+
+                span{
+                    margin-top: .3rem;
+                    width: 4rem;
+                    height: .2rem;
+                    background: $primary-color;
+                }
+            }
+            h4{
+                margin-top: .7rem;
+            }
+        }
+        &__influencer{
+            margin-bottom: 1rem;
+            
+            &-heading{
+                @include center_element;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+
+                span{
+                    margin-top: .3rem;
+                    width: 4rem;
+                    height: .2rem;
+                    background: $primary-color;
+                }
+            }
+            h4{
+                margin-top: .7rem;
+            }
+        }
+        &__services{
+            margin-top: 1rem;
+            &-heading{
+                @include center_element;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+                
+                span{
+                    margin-top: .3rem;
+                    width: 3rem;
+                    height: .2rem;
+                    background: $primary-color;
+                }
+            }
+            h4{
+                margin-top: .7rem;
+            }
+        }
+    }
+
+    @media screen and (max-width:850px) {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        &>*{
+            margin-bottom: 1rem;
+        }
+        &-detail{
+            width: 100%;
+            padding-right: 1rem;
+        }
+
+        &-links{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            
+            &>*{
+                flex-wrap: wrap;
+                margin-top: 1rem;
+                
+            }
+        }
+    }
+    @media screen and (max-width:750px) {
+        padding: 1rem;
+        font-size: .9rem;
+    }
+}
