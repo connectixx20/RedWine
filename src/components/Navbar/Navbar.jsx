@@ -58,20 +58,20 @@ const Navbar = () => {
     }, [changeplus, openHamburger])
 
 
-    const handleScroll=()=>{
-        const post=window.pageYOffset
+    const handleScroll = () => {
+        const post = window.pageYOffset
         setHeaderScroll(post)
     }
-    
+
     useEffect(() => {
-        window.addEventListener("scroll",handleScroll)
+        window.addEventListener("scroll", handleScroll)
     }, [headerScroll])
-    
+
     return (
-        <header className={`redwine__navbar ${headerScroll > 10 && "sticky"}`}>
+        <header className={`redwine__navbar ${headerScroll > 10 ? "sticky" : ""}`}>
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ ease: "easeIn", duration: .3 }} className="redwine__navbar-logo" whileHover={{ scale: 1.1 }} >
                 <Link passHref href={"/"}>
-                    <Image src={"https://res.cloudinary.com/dykwfe4cr/image/upload/v1642744232/logo_upg6p6.png"} width={width < 600 ? 250 : headerScroll > 10 ? 250 : 300} height={width < 600 ? 150 : headerScroll > 10 ? 100 : 150} objectFit="cover" alt="RedWine" />
+                    <Image src={"https://res.cloudinary.com/dykwfe4cr/image/upload/v1642744232/logo_upg6p6.png"} width={width < 600 ? headerScroll > 10 ? 200 : 250 : headerScroll > 10 ? 250 : 300} height={width < 600 ? headerScroll > 10 ? 100 : 150 : headerScroll > 10 ? 100 : 150} objectFit="cover" alt="RedWine" />
                 </Link>
             </motion.div>
             <div className="redwine__navbar-hamburger">
@@ -120,9 +120,9 @@ const Navbar = () => {
                                     ) : null}
                                 </motion.div>
                                 {data?.isSubmenu & data?.id === d.id ? (
-                                    <motion.ul className={`${data.className} animate__animated animate__zoomIn`} transition={{ type: "spring", duration: 2 }} onMouseIn={() => setSubMenu(d.id)}>
+                                    <motion.ul className={`${data.className} animate__animated animate__zoomIn`} transition={{ type: "spring", duration: 2 }} variants={linkVariant} initial="hidden" animate="show" onMouseIn={() => setSubMenu(d.id)}>
                                         {data.subLink.map((d) => (
-                                            <li key={d.mame}>
+                                            <motion.li key={d.mame} variants={itemVariant}>
                                                 <motion.div whileHover={{ scale: 1.1, y: -5, x: width < 850 ? -15 : 15, color: '#D12FEB' }} transition={{ type: 'spring', stiffness: 100 }} >
                                                     <Link passHref href={`/${d.redirect}`}>
                                                         <h3>{d.mame}</h3>
@@ -133,7 +133,7 @@ const Navbar = () => {
                                                         <FaCaretLeft />
                                                     </p>
                                                 )}
-                                            </li>
+                                            </motion.li>
                                         ))}
                                     </motion.ul>
                                 ) : null}
@@ -152,7 +152,7 @@ const Navbar = () => {
                     }
                 </motion.ul>
             )}
-            <motion.div className="redwine__navbar-register" animate={{ x: [0, -20, 20, -20, 20, 0] }} whileHover={{ scale: 1.2, color: "#ffffff", background: "black", outlineColor: "#D12FEB" }} transition={{ type: 'spring' }}>
+            <motion.div className="redwine__navbar-register" animate={{ x: [0, -20, 20, -20, 20, 0] }} whileHover={{ scale: 1.2, color: "#ffffff", outlineColor: "#D12FEB" }} transition={{ type: 'spring' }}>
                 <Link href={"/register"} passHref>
                     <h2>Regis<span>ter</span></h2>
                 </Link>
