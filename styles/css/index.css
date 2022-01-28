@@ -180,7 +180,7 @@ a {
     position: absolute;
     right: 1rem;
     top: 8rem;
-    font-size: .85rem;
+    font-size: 0.85rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -199,7 +199,7 @@ a {
 
 @media screen and (max-width: 850px) and (max-width: 330px) {
   .redwine__navbar-links {
-    padding: .8rem .4rem .8rem 1.5rem;
+    padding: 0.8rem 0.4rem 0.8rem 1.5rem;
   }
 }
 
@@ -219,7 +219,7 @@ a {
     width: 100%;
     padding: 1rem;
     background: black;
-    border-radius: .6rem;
+    border-radius: 0.6rem;
   }
   .redwine__navbar-links .item {
     display: -webkit-box;
@@ -301,7 +301,7 @@ a {
   .redwine__navbar-links .submenu2 {
     width: 8rem;
     right: 11rem;
-    padding: 1rem .5rem;
+    padding: 1rem 0.5rem;
   }
 }
 
@@ -323,11 +323,22 @@ a {
 
 .sticky {
   position: fixed;
-  top: 0;
+  top: -10px;
   background: #0b0808;
   border-bottom: 1px solid #fff;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: background 500ms ease, -webkit-transform 500ms ease;
+  transition: background 500ms ease, -webkit-transform 500ms ease;
+  transition: transform 500ms ease, background 500ms ease;
+  transition: transform 500ms ease, background 500ms ease, -webkit-transform 500ms ease;
+  -webkit-transition: transform 500ms ease, background 500ms ease;
+  -webkit-box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.1);
 }
 
 .redwine__footer {
