@@ -19,8 +19,8 @@ const Carousel = () => {
           </motion.div>
         </motion.div>
       </div>
-      <motion.div className="redwine__home-carousel__image" initial={{y:100,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:2}}>
-        <Image src={"https://res.cloudinary.com/redwine/image/upload/v1643464160/Home/photo-1606857521015-7f9fcf423740_zlhjwc.jpg"} layout="responsive" width={1920} height={1080} objectFit="cover" />
+      <motion.div className="redwine__home-carousel__image" initial={{y:100,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1.4}}>
+        <Image src={"https://res.cloudinary.com/redwine/image/upload/v1643463860/Home/photo-1562835155-1fa627c69744_ux2r2u.jpg"} layout="responsive" width={1920} height={1080} objectFit="cover" />
         <div className="play-button">
           <div className="play-button__circle">
             <FiPlay />

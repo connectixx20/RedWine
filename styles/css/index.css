@@ -620,6 +620,15 @@ a {
   fill: #961313;
 }
 
+@media screen and (max-width: 750px) {
+  .redwine__scrolltotop-circle {
+    padding: .3rem;
+  }
+  .redwine__scrolltotop svg {
+    font-size: 2rem;
+  }
+}
+
 .redwine__home-carousel {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -653,6 +662,7 @@ a {
 
 .redwine__home-carousel__detail-left h1 {
   font-size: 4rem;
+  color: #961313;
 }
 
 .redwine__home-carousel__detail-right {
@@ -662,6 +672,17 @@ a {
 .redwine__home-carousel__detail-right h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
+}
+
+.redwine__home-carousel__detail-right p {
+  color: #961313;
+}
+
+.redwine__home-carousel__detail-right p:hover svg {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .redwine__home-carousel__image {
@@ -678,7 +699,6 @@ a {
   top: 0;
   left: 0;
   text-align: center;
-  background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -710,6 +730,12 @@ a {
 
 .redwine__home-carousel__image .play-button__circle svg path {
   background: #961313;
+}
+
+@media screen and (max-width: 750px) {
+  .redwine__home-carousel__image .play-button__circle svg {
+    font-size: 1rem;
+  }
 }
 
 .redwine__home-carousel__image .play-button__circle:hover {
