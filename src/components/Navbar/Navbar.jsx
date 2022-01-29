@@ -68,7 +68,7 @@ const Navbar = () => {
     }, [headerScroll])
 
     return (
-        <header className={`redwine__navbar ${headerScroll > 10 ? "sticky" : ""}`}>
+        <header className={`redwine__navbar ${headerScroll > 75 ? "sticky" : ""}`}>
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ ease: "easeIn", duration: .3 }} className="redwine__navbar-logo" whileHover={{ scale: 1.1 }} >
                 <Link passHref href={"/"}>
                     <Image src={"https://res.cloudinary.com/dykwfe4cr/image/upload/v1642744232/logo_upg6p6.png"} width={width < 600 ? headerScroll > 10 ? 200 : 250 : headerScroll > 10 ? 250 : 300} height={width < 600 ? headerScroll > 10 ? 100 : 150 : headerScroll > 10 ? 100 : 150} objectFit="cover" alt="RedWine" />

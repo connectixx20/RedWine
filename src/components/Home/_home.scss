@@ -1,0 +1,167 @@
+.redwine__scrolltotop {
+  position: fixed;
+  right: 1rem;
+  z-index: 22222;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &-circle {
+    padding: 0.4rem;
+    background: $primary-color;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  svg {
+    margin-top: 1rem;
+    path {
+      background: $primary-color;
+      fill: $primary-color;
+    }
+    font-size: 3rem;
+  }
+}
+
+
+.redwine__home-carousel{
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  flex-direction: column;
+  padding:1rem 8rem;
+
+  &__detail{
+    @include center-element;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    overflow: hidden;
+
+    &-left{
+      h1{
+        font-size: 4rem;
+
+      }
+    }
+    &-right{
+      width: 50%;
+
+      h4{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__image{
+    position: relative;
+    .play-button{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      background: rgba($color: #000000, $alpha: 0.5);
+      border-radius: 20px;
+      align-items: center;
+      justify-content: center;
+      
+      &__circle {
+        @include center-element;
+        border-radius: 50%;
+        padding: 1rem;
+        background: $primary-color;
+
+        svg{
+          font-size: 2rem;
+          fill: $primary-color;
+          path{
+            background: $primary-color;
+          }
+        }
+
+        &:hover {
+          transition: all 0.3s ease-out;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:1400px) {
+    &{
+      padding: 1rem 6rem;
+
+
+      &__detail{
+        &-left{
+          h1{
+            font-size: 3rem;
+          }
+        }
+        &-right{
+          h4{
+            font-size: 1rem;   
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width:1100px) {
+    &{
+      padding: 1rem 3rem;
+    }
+  }
+  @media screen and (max-width:900px) {
+    &{
+      padding: 1rem 2rem;
+
+
+      &__detail{
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+        &-left{
+          h1{
+            font-size: 3rem;
+          }
+          margin-bottom: 1rem;
+        }
+        &-right{
+          width: 100%;
+          h4{
+            font-size: 1rem;   
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width:500px) {
+    &{
+      padding: 0 1rem;
+
+
+      &__detail{
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+        &-left{
+          h1{
+            font-size: 2.5rem;
+          }
+          margin-bottom: 1rem;
+        }
+        &-right{
+          width: 100%;
+          h4,p{
+            font-size: .9rem;   
+          }
+        }
+      }
+    }
+  }
+
+  
+}
