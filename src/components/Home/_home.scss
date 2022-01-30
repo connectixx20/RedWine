@@ -37,6 +37,38 @@
   }
 }
 
+.redwine__modal{
+  position: relative;
+  background: rgba($color: #000000, $alpha: .9);
+  z-index: 1232;
+  &-element{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-35%);
+  }
+  &-close{
+    padding: 1rem;
+    position: fixed;
+    background: $primary-color;
+    top: 10rem;
+    right: 1rem;
+  }
+  video{
+    width: 100%;
+  }
+  @media screen and (max-width:950px) {
+    &-element{
+      left: 0;
+      transform: translate(0,-50%);
+      padding: 1rem;
+    }
+    &-close{
+      padding: .5rem;
+    }
+  }
+}
+
 
 .redwine__home-carousel{
   display: flex;
@@ -187,7 +219,5 @@
         }
       }
     }
-  }
-
-  
+  } 
 }
