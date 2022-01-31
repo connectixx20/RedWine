@@ -11,3 +11,9 @@ e.g
 
 for using react-intersection-observer with Framer Motion:-
 https://javascript.plainenglish.io/animate-when-element-is-in-view-with-framer-motion-63b254403bf
+
+
+
+2. For viewport issue we can use whileHover and viewport
+
+<motion.div className="redwine__home-services-intro__title" variants={introTItle} whileInView="visible" initial="hidden" viewport="once">

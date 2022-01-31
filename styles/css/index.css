@@ -622,7 +622,7 @@ a {
 
 @media screen and (max-width: 750px) {
   .redwine__scrolltotop-circle {
-    padding: .3rem;
+    padding: 0.3rem;
   }
   .redwine__scrolltotop svg {
     font-size: 2rem;
@@ -663,7 +663,7 @@ a {
     padding: 1rem;
   }
   .redwine__modal-close {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 }
 
@@ -717,8 +717,8 @@ a {
 }
 
 .redwine__home-carousel__detail-right p:hover svg {
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
@@ -846,8 +846,268 @@ a {
   .redwine__home-carousel__detail-right {
     width: 100%;
   }
-  .redwine__home-carousel__detail-right h4, .redwine__home-carousel__detail-right p {
-    font-size: .9rem;
+  .redwine__home-carousel__detail-right h4,
+  .redwine__home-carousel__detail-right p {
+    font-size: 0.9rem;
+  }
+}
+
+.redwine__home-services {
+  padding: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.redwine__home-services-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.redwine__home-services-intro__title h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+  color: #961313;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.redwine__home-services-intro__detail {
+  margin-top: 2rem;
+  width: 45%;
+  font-size: 1.3rem;
+}
+
+.redwine__home-services__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85%;
+  margin-top: 6rem;
+}
+
+.redwine__home-services__content-card {
+  width: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.redwine__home-services__content-card:last-child {
+  margin-top: 3rem;
+}
+
+.redwine__home-services__content-card svg {
+  font-size: 3rem;
+}
+
+.redwine__home-services__content-card .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.redwine__home-services__content-card .detail h1 {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  color: #961313;
+}
+
+.redwine__home-services__content-card .detail p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.redwine__home-services__content-card .detail__redirect {
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.redwine__home-services__content-card .detail__redirect p {
+  margin-top: 0;
+  margin-right: 1rem;
+  color: #961313;
+}
+
+.redwine__home-services__content-card .detail__redirect svg {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .redwine__home-services {
+    padding: 5rem;
+  }
+  .redwine__home-services__content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1400px) and (max-width: 1200px) {
+  .redwine__home-services__content-card:first-child {
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .redwine__home-services {
+    padding: 3rem;
+  }
+  .redwine__home-services-intro h1 {
+    font-size: 2.5rem;
+  }
+  .redwine__home-services-intro p {
+    font-size: 1rem;
+  }
+  .redwine__home-services__content {
+    width: 100%;
+  }
+  .redwine__home-services__content-card svg {
+    font-size: 2.4rem;
+  }
+  .redwine__home-services__content-card .detail h1 {
+    font-size: 2rem;
+  }
+  .redwine__home-services__content-card .detail p {
+    font-size: 1rem;
+  }
+  .redwine__home-services__content-card .detail__redirect p {
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 900px) and (max-width: 1200px) {
+  .redwine__home-services__content-card:first-child {
+    margin-right: 3rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .redwine__home-services {
+    padding: 2rem;
+  }
+  .redwine__home-services-intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .redwine__home-services-intro__detail {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .redwine__home-services {
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+  .redwine__home-services-intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .redwine__home-services-intro__detail {
+    width: 100%;
+  }
+  .redwine__home-services__content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .redwine__home-services__content-card {
+    width: 100%;
+  }
+  .redwine__home-services__content-card .detail svg {
+    font-size: 3rem;
+  }
+  .redwine__home-services__content-card .detail__redirect svg {
+    font-size: 1.4rem;
   }
 }
 /*# sourceMappingURL=index.css.map */

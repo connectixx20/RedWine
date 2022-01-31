@@ -73,7 +73,7 @@ const Footer = () => {
         }
     }, [width, inView,animation])
 
-    console.log({ inView })
+
     return (
         <Intersection setInview={setInView}>
             
