@@ -3,11 +3,11 @@ import React from 'react';
 const Digital = () => {
     return (
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-            width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+            width="3rem" viewBox="0 0 512.000000 512.000000"
             preserveAspectRatio="xMidYMid meet">
 
             <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-                fill="#000000" stroke="none">
+                fill="#fff" stroke="none">
                 <path d="M1482 5105 c-35 -8 -102 -33 -150 -56 -69 -33 -102 -58 -167 -123
    -138 -139 -184 -256 -192 -486 l-5 -145 -314 -315 -314 -316 0 -325 c0 -345 5
    -390 51 -481 34 -67 122 -152 193 -187 101 -49 244 -59 339 -22 16 6 32 11 37

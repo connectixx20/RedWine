@@ -19,12 +19,12 @@ const Services = () => {
             info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat inventore earum id. Nihil quisquam quam aliquid maxime aspernatur iste dolorum possimus! Aliquam optio quia quos quasi aut. Eaque, nesciunt enim?",
             icon: <FaYoutube />
         },
-        // {
-        //     id: 3,
-        //     name: "Digital Media Marketing",
-        //     info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat inventore earum id. Nihil quisquam quam aliquid maxime aspernatur iste dolorum possimus! Aliquam optio quia quos quasi aut. Eaque, nesciunt enim?",
-        //     icon: <Digital />
-        // },
+        {
+            id: 3,
+            name: "Digital Media Marketing",
+            info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat inventore earum id. Nihil quisquam quam aliquid maxime aspernatur iste dolorum possimus! Aliquam optio quia quos quasi aut. Eaque, nesciunt enim?",
+            icon: <Digital />
+        },
     ]
 
     const introTItle = {

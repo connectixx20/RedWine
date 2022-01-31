@@ -65,12 +65,12 @@ const Footer = () => {
     useEffect(() => {
         setWidth(window.innerWidth)
 
-        if(inView){
-            animation.start("show")
-        }
-        if(!inView){
-            animation.start("hidden")
-        }
+        // if(inView){
+        //     animation.start("show")
+        // }
+        // if(!inView){
+        //     animation.start("hidden")
+        // }
     }, [width, inView,animation])
 
 
@@ -81,7 +81,7 @@ const Footer = () => {
                 <div className="redwine__footer-detail">
                     <Image src={"https://res.cloudinary.com/redwine/image/upload/v1643198813/logo/logo_xb6txg.png"} width={width < 600 ? 120 : 180} height={width < 600 ? 80 : 80} objectFit="contain" alt="RedWine" />
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias maxime, quod, ad dolorum laborum iure cum aut totam suscipit, voluptatum cumque repellendus eum esse corrupti obcaecati architecto tempora sed!</p>
-                    <motion.div className="redwine__footer-detail__social" variants={linkVariant} initial="hidden" animate={animation} >
+                    <motion.div className="redwine__footer-detail__social" variants={linkVariant} initial="hidden" whileInView="show" viewport={{once:true}}>
                         {icons.map((d) => (
                             <motion.a href="#" target="_blank" variants={itemVariant} key={d.id}>
                                 <motion.div whileHover={{ x: 5, y: -5, color: "red" }} transition={{ type: "spring", stiffness: 300 }}>
@@ -97,7 +97,7 @@ const Footer = () => {
                             <h3>Quick Links</h3>
                             <span></span>
                         </div>
-                        <motion.div variants={linkVariant} initial="hidden" animate={animation}>
+                        <motion.div variants={linkVariant} initial="hidden" whileInView="show" viewport={{once:true}}>
                             {quickLinks.map((d) => (
                                 <motion.div variants={itemVariant} key={d.name}>
                                     <Link href={`/${d.url}`} >
@@ -112,7 +112,7 @@ const Footer = () => {
                             <h3>Influencer</h3>
                             <span></span>
                         </div>
-                        <motion.div variants={linkVariant} initial="hidden" animate={animation}>
+                        <motion.div variants={linkVariant} initial="hidden" whileInView="show" viewport={{once:true}}>
                             {influencerLinks.map((d) => (
                                 <motion.div variants={itemVariant}  key={d.name}>
                                     <Link href={`/${d.url}`} >
@@ -127,7 +127,7 @@ const Footer = () => {
                             <h3>Services</h3>
                             <span></span>
                         </div>
-                        <motion.div variants={linkVariant} initial="hidden" animate={animation}>
+                        <motion.div variants={linkVariant} initial="hidden" whileInView="show" viewport={{once:true}}>
                             {serviceLinks.map((d) => (
                                 <motion.div variants={itemVariant}  key={d.name}>
                                     <Link href={`/${d.url}`} >
