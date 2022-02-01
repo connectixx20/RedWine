@@ -46,7 +46,7 @@ a {
 }
 
 @mixin silver-text {
-  background: linear-gradient(#d124ff, #ff2a2a);
+  background: linear-gradient(white, black);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

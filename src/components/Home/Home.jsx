@@ -1,5 +1,6 @@
 import ScrolltoTop from "../scroll/ScrolltoTop";
-import { Services,Carousel } from "./SubComponent";
+import { Services,Carousel,Influencer } from "./SubComponent";
+
 
 const Home = () => {
   return (
@@ -7,6 +8,7 @@ const Home = () => {
       <ScrolltoTop />
       <Carousel />
       <Services />
+      <Influencer />
     </div>
   );
 };
