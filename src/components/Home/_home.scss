@@ -251,7 +251,7 @@
       width: 85%;
       margin-top: 6rem;
       grid-gap: 2rem;
-      overflow-x: hidden;
+      overflow-y: hidden;
 
       &-card {
         width: 28rem;
@@ -413,17 +413,16 @@
   &-influencer {
     padding: 7rem;
     overflow-x: hidden;
-    
+
     &__title {
       @include center-element;
       color: $primary-color;
       flex-direction: column;
       align-items: flex-end;
-      span{
+      span {
         background: $secondary-color;
-        height: .2rem;
-        margin-top: .2rem;
-        
+        height: 0.2rem;
+        margin-top: 0.2rem;
       }
       h1 {
         font-size: 3rem;
@@ -463,7 +462,7 @@
         &:hover .inner {
           display: flex;
         }
-        &:hover img{
+        &:hover img {
           transition: all 1s ease-in;
           // transform: scale(1.2);
         }
@@ -499,14 +498,127 @@
 
         &__content {
           .inner {
-            font-size: 1rem;
+            font-size: 0.9rem;
           }
         }
       }
     }
   }
 
-  .blur:not(.redwine__modal) {
-    // filter: blur(5px);
+  &-testimonial {
+    padding: 7rem;
+    overflow-x: hidden;
+
+    &__title {
+      @include center-element;
+      color: $primary-color;
+      flex-direction: column;
+      align-items: flex-end;
+      span {
+        background: $secondary-color;
+        height: 0.2rem;
+        margin-top: 0.2rem;
+      }
+      h1 {
+        font-size: 3rem;
+        overflow-x: hidden;
+      }
+    }
+
+    &__content {
+      margin-top: 5rem;
+    
+.swiper-button-prev,.swiper-button-next{
+  color: $primary-color
+}
+
+      &-upper {
+        @include center-element;
+        justify-content: space-evenly;
+
+        .title {
+          width: 50%;
+          @include center-element;
+
+          flex-direction: column;
+          align-items: flex-start;
+
+          
+          p:last-child {
+            margin-top: 1.3rem;
+            width: 50%;
+          }
+          @media screen and (max-width: 1050px) {
+            & {
+              width: 100%;
+              p {
+                width: 100% !important;
+              }
+            }
+          }
+        }
+
+        iframe {
+          border: 5px solid $primary-color;
+          
+        }
+      }
+
+      &-lower {
+        margin-top: 3rem;
+
+        .card-show {
+          padding: 0.5rem;
+          background: $primary-color;
+        }
+      }
+    }
+    @media screen and (max-width: 1400px) {
+      & {
+        padding: 5rem;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      & {
+        padding: 3rem;
+
+        &__content{
+          &-upper{
+            flex-direction: column-reverse;
+
+            .video{
+              width: 100%;
+              iframe{
+                width: 100% !important;
+                height: 16rem;
+              }
+              }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 750px) {
+      & {
+        padding: 2rem;
+
+        &__title {
+          h1 {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      & {
+        padding: 1rem;
+        margin-top: 4rem;
+
+        &__content {
+          font-size: .8rem;
+          
+        }
+      }
+    }
   }
 }

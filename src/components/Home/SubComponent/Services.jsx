@@ -103,7 +103,7 @@ const Services = () => {
             </div>
             <motion.div className="redwine__home-services__content" variants={contentVariant} >
                 {services.map((d,i) => (
-                    <motion.div className="redwine__home-services__content-card" variants={cardVarient} key={d.name} initial={{translateY: i % 2===0 ? -100 : 100,translateX: i % 2===0 ? -100 : 100,opacity:0}} whileInView={{translateY:0,translateX:0,opacity:1}} transition={{duration: 1.3 ,delay: width >650 && i + 0.4 }}  viewport={{once:true}}>
+                    <motion.div className="redwine__home-services__content-card" variants={cardVarient} key={d.name} initial={{y: 200,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration: 1.3 ,delay: width >650 && i + 0.4 }}  viewport={{once:true}}>
                         {d.icon}
                         <div className="detail">
                             <h1>{d.name}</h1>

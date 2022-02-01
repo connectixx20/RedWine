@@ -1,3 +1,5 @@
 export {default as Carousel} from './Carousel'
 export {default as Services} from './Services'
 export {default as Influencer} from './Influencer'
+export {default as About} from './About'
+export {default as Testimonial} from './Testimonial'

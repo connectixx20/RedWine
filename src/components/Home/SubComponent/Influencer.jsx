@@ -69,14 +69,14 @@ const Influencer = () => {
     return (
         <div className='redwine__home-influencer'>
             <div className="redwine__home-influencer__title">
-                <motion.h1 initial={{ x:  width < 700 ? 100 : 300, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1 }} viewport={{ once: true }}>Influencer</motion.h1>
-                <motion.span initial={{width:0,opacity:0}} whileInView={{width:width <700? 80: 130,opacity:1}} transition={{duration:1.4,delay:2,type:"spring",stiffness:300}} viewport={{once: true}}></motion.span>
+                <motion.h1 initial={{ x:  width < 700 ? -100 : -500, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.4 }} viewport={{ once: true }}>Our Influencers</motion.h1>
+                <motion.span initial={{width:0,opacity:0}} whileInView={{width:width <700? 140 : 170,opacity:1}} transition={{duration:1.4,delay:2,type:"spring",stiffness:300}} viewport={{once: true}}></motion.span>
             </div>
             <div className="redwine__home-influencer__content">
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={30}
-                    autoplay={{delay:3000}}
+                    autoplay={{delay:3000,disableOnInteraction:true}}
                     modules={[Pagination, Navigation,Autoplay]}
                     speed={600}
                     className="mySwiper"

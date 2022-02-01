@@ -921,7 +921,7 @@ a {
   width: 85%;
   margin-top: 6rem;
   grid-gap: 2rem;
-  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .redwine__home-services__content-card {
@@ -1127,8 +1127,8 @@ a {
 
 .redwine__home-influencer__title span {
   background: #fff;
-  height: .2rem;
-  margin-top: .2rem;
+  height: 0.2rem;
+  margin-top: 0.2rem;
 }
 
 .redwine__home-influencer__title h1 {
@@ -1234,7 +1234,157 @@ a {
     margin-top: 4rem;
   }
   .redwine__home-influencer__content .inner {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.redwine__home-testimonial {
+  padding: 7rem;
+  overflow-x: hidden;
+}
+
+.redwine__home-testimonial__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #961313;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.redwine__home-testimonial__title span {
+  background: #fff;
+  height: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.redwine__home-testimonial__title h1 {
+  font-size: 3rem;
+  overflow-x: hidden;
+}
+
+.redwine__home-testimonial__content {
+  margin-top: 5rem;
+}
+
+.redwine__home-testimonial__content .swiper-button-prev, .redwine__home-testimonial__content .swiper-button-next {
+  color: #961313;
+}
+
+.redwine__home-testimonial__content-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.redwine__home-testimonial__content-upper .title {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.redwine__home-testimonial__content-upper .title p:last-child {
+  margin-top: 1.3rem;
+  width: 50%;
+}
+
+@media screen and (max-width: 1050px) {
+  .redwine__home-testimonial__content-upper .title {
+    width: 100%;
+  }
+  .redwine__home-testimonial__content-upper .title p {
+    width: 100% !important;
+  }
+}
+
+.redwine__home-testimonial__content-upper iframe {
+  border: 5px solid #961313;
+}
+
+.redwine__home-testimonial__content-lower {
+  margin-top: 3rem;
+}
+
+.redwine__home-testimonial__content-lower .card-show {
+  padding: 0.5rem;
+  background: #961313;
+}
+
+@media screen and (max-width: 1400px) {
+  .redwine__home-testimonial {
+    padding: 5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .redwine__home-testimonial {
+    padding: 3rem;
+  }
+  .redwine__home-testimonial__content-upper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .redwine__home-testimonial__content-upper .video {
+    width: 100%;
+  }
+  .redwine__home-testimonial__content-upper .video iframe {
+    width: 100% !important;
+    height: 16rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .redwine__home-testimonial {
+    padding: 2rem;
+  }
+  .redwine__home-testimonial__title h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .redwine__home-testimonial {
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+  .redwine__home-testimonial__content {
+    font-size: .8rem;
   }
 }
 /*# sourceMappingURL=index.css.map */

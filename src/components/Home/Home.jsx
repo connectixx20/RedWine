@@ -1,5 +1,5 @@
 import ScrolltoTop from "../scroll/ScrolltoTop";
-import { Services,Carousel,Influencer } from "./SubComponent";
+import { Services,Carousel,Influencer,Testimonial } from "./SubComponent";
 
 
 const Home = () => {
@@ -7,8 +7,9 @@ const Home = () => {
     <div className="redwine__home">
       <ScrolltoTop />
       <Carousel />
-      <Services />
       <Influencer />
+      <Services />
+      <Testimonial />
     </div>
   );
 };
