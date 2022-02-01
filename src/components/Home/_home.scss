@@ -413,10 +413,16 @@
   &-influencer {
     padding: 7rem;
     overflow-x: hidden;
+    
     &__title {
       @include center-element;
       color: $primary-color;
-
+      flex-direction: column;
+      span{
+        background: $secondary-color;
+        height: .2rem;
+        
+      }
       h1 {
         font-size: 3rem;
         overflow-x: hidden;
@@ -433,17 +439,31 @@
         }
         .inner {
           @include center-element;
-          opacity: 0;
+          display: none;
           border-radius: 1rem;
+          cursor: pointer;
           position: absolute;
           width: 100%;
           height: 100%;
           flex-direction: column;
           font-size: 1.3rem;
-          background: rgba($color: #000000, $alpha: 0.7);
+          border-radius: 1rem;
           h1 {
+            transition: all 0.8s ease-out;
             color: $primary-color;
           }
+          &:hover {
+            transition: all 0.8s ease-out;
+            background: rgba($color: #000000, $alpha: 0.7);
+          }
+        }
+
+        &:hover .inner {
+          display: flex;
+        }
+        &:hover img{
+          transition: all 1s ease-in;
+          // transform: scale(1.2);
         }
       }
     }
@@ -463,8 +483,8 @@
       & {
         padding: 2rem;
 
-        &__title{
-          h1{
+        &__title {
+          h1 {
             font-size: 2rem;
           }
         }
@@ -475,13 +495,12 @@
         padding: 1rem;
         margin-top: 4rem;
 
-        &__content{
-          .inner{
+        &__content {
+          .inner {
             font-size: 1rem;
           }
         }
       }
-
     }
   }
 
