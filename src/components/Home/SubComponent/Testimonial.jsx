@@ -106,7 +106,7 @@ const Testimonial = () => {
                         <p>{selectedData?.info}</p>
                     </motion.div>
                     <motion.div className="video" initial={{x:100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:1.4}}>
-                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${selectedData?.vid}`} title="YouTube video player" frameborder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${selectedData?.vid}`} title="YouTube video player" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </motion.div>
                 </div>
                 <div className="redwine__home-testimonial__content-lower">
