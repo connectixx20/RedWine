@@ -921,6 +921,7 @@ a {
   width: 85%;
   margin-top: 6rem;
   grid-gap: 2rem;
+  overflow-x: hidden;
 }
 
 .redwine__home-services__content-card {

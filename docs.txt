@@ -17,3 +17,9 @@ https://javascript.plainenglish.io/animate-when-element-is-in-view-with-framer-m
 2. For viewport issue we can use whileHover and viewport
 
 <motion.div className="redwine__home-services-intro__title" variants={introTItle} whileInView="visible" initial="hidden" viewport="once">
+
+
+we can use stagger children with mapped index number 
+
+i.e we can define delay for each child 
+
