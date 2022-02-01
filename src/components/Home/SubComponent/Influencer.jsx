@@ -61,7 +61,7 @@ const Influencer = () => {
     }
     const [show, setShow] = useState(false);
     const [width, setWidth] = useState(0);
-    console.log({show})
+    
 
     useEffect(()=>{
         setWidth(window.innerWidth)

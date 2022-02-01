@@ -418,9 +418,11 @@
       @include center-element;
       color: $primary-color;
       flex-direction: column;
+      align-items: flex-end;
       span{
         background: $secondary-color;
         height: .2rem;
+        margin-top: .2rem;
         
       }
       h1 {

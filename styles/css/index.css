@@ -1120,11 +1120,15 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .redwine__home-influencer__title span {
   background: #fff;
   height: .2rem;
+  margin-top: .2rem;
 }
 
 .redwine__home-influencer__title h1 {
