@@ -17,7 +17,7 @@
     & > * {
       margin-left: -50%;
     }
-
+    
     h2 {
       @include primary-text;
       font-size: 1.2rem;
@@ -29,9 +29,7 @@
       }
     }
     .bottom__line {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center_element;
     }
     span {
       text-align: center;
@@ -118,6 +116,7 @@
       // display: none;
       position: absolute;
       right: 1rem;
+      overflow-x: none;
       top: 8rem;
       font-size: 0.85rem;
       flex-direction: column;
@@ -125,6 +124,15 @@
       background: $secondary-color;
       padding: 1rem 1.4rem 1rem 2.5rem;
       border-radius: 0.6rem;
+
+      .show_plus{
+        @include center_element;
+  
+        &-plus{
+          margin-right: .5rem !important; 
+          font-size: 1rem;
+        }
+      }
 
       h2 {
         color: black;
@@ -177,12 +185,12 @@
       .submenu1 {
         margin-top: 0;
         position: absolute;
-        right: 12rem;
+        right: 13rem;
       }
       .submenu2 {
         margin-top: 0;
         position: absolute;
-        right: 12rem;
+        right: 13rem;
         width: 16rem;
 
         @media screen and (max-width: 448px) {

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from 'framer-motion'
 import { links } from "../../db/data";
 import { useEffect, useState } from "react";
-import { FaTimes, FaAlignRight, FaCaretLeft } from 'react-icons/fa'
+import { FaTimes, FaAlignRight, FaCaretLeft, FaPlus,FaMinus } from 'react-icons/fa'
 
 const Navbar = () => {
     const [subMenu, setSubMenu] = useState(null);
@@ -24,7 +24,7 @@ const Navbar = () => {
     const itemVariant = {
         hidden: {
             opacity: 0,
-            x: width < 650 ? -50 : 50
+            x: width < 650 ? -50 : -50
         },
         show: {
             opacity: 1,
@@ -91,7 +91,7 @@ const Navbar = () => {
             {(width < 850 ? openHamburger : true) && (
                 <motion.ul className="redwine__navbar-links" variants={linkVariant} initial="hidden" animate="show">
                     {links.map((d, i) => (
-                        <motion.li className="redwine__navbar-links__item" key={d.name} onMouseOver={() => setSubMenu(d.id)} onMouseOut={() => data?.isSubmenu ? null : setSubMenu(null)} variants={itemVariant} >
+                        <motion.li className="redwine__navbar-links__item" key={d.name} onMouseOver={() => width > 850 && setSubMenu(d.id)} onMouseOut={() =>  data?.isSubmenu ? null : width > 850 && setSubMenu(null)} variants={itemVariant} >
                             <>
                                 <motion.div className="item" onMouseOver={() => d?.id === data?.id && setChangeplus(true)} onMouseOut={() => setChangeplus(false)} >
                                     {/* {width < 850 & d.isSubmenu && (
@@ -101,7 +101,13 @@ const Navbar = () => {
                                             )}
                                             </p>
                                 )} */}
-                                    <motion.div whileHover={{ scale: 1.2, y: -5, x: width < 850 ? -15 : 0 }} transition={{ type: 'spring', stiffness: 300 }}>
+                                    <motion.div whileHover={{ scale: width > 850 ? 1.2: 1, y: width > 850 ? -5 : 0, x: width < 850 ? 0 : 0 }} whileTap={{scale:1.2}} transition={{ type: 'spring', stiffness: 300 }} className={`${width < 850 && "show_plus"}`}>
+                                        {width < 850 & d.isSubmenu ? (
+                                            data?.id!==d.id ?
+                                                <FaPlus className="show_plus-plus" onClick={() => setSubMenu(d.id)} />
+                                                
+                                                : data?.id===d.id && <FaMinus  onClick={()=>setSubMenu(null)} />
+                                        ) : null}
                                         <Link href={`/${d.redirect}`} passHref>
                                             <h2>
                                                 {d.name}

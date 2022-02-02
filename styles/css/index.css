@@ -179,6 +179,7 @@ a {
   .redwine__navbar-links {
     position: absolute;
     right: 1rem;
+    overflow-x: none;
     top: 8rem;
     font-size: 0.85rem;
     -webkit-box-orient: vertical;
@@ -191,6 +192,21 @@ a {
     background: #fff;
     padding: 1rem 1.4rem 1rem 2.5rem;
     border-radius: 0.6rem;
+  }
+  .redwine__navbar-links .show_plus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .redwine__navbar-links .show_plus-plus {
+    margin-right: .5rem !important;
+    font-size: 1rem;
   }
   .redwine__navbar-links h2 {
     color: black;
@@ -281,12 +297,12 @@ a {
   .redwine__navbar-links .submenu1 {
     margin-top: 0;
     position: absolute;
-    right: 12rem;
+    right: 13rem;
   }
   .redwine__navbar-links .submenu2 {
     margin-top: 0;
     position: absolute;
-    right: 12rem;
+    right: 13rem;
     width: 16rem;
   }
 }
