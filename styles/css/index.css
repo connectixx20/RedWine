@@ -29,6 +29,12 @@ body::-webkit-scrollbar-thumb {
   background: #961313;
 }
 
+.divider {
+  height: 1px;
+  background: rgb(188, 188, 188);
+  margin: 3rem 0;
+}
+
 .redwine__navbar {
   position: fixed;
   width: 100%;
@@ -83,9 +89,9 @@ body::-webkit-scrollbar-thumb {
   width: 12rem;
   box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
   position: absolute;
-  top: 3.5rem;
+  top: 2.7rem;
 }
-.redwine__navbar-content .link__item .option__item {
+.redwine__navbar-content .link__item .option__item:not(:last-child) {
   margin-bottom: 0.5rem;
   width: 100%;
 }
@@ -159,6 +165,7 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .redwine__footer {
+  margin-top: 5rem;
   padding: 5rem 5rem 1rem;
   background: rgb(212, 212, 212);
 }
@@ -198,11 +205,6 @@ body::-webkit-scrollbar-thumb {
 }
 .redwine__footer .upper .content a:not(:last-child) {
   margin-bottom: 0.6rem;
-}
-.redwine__footer .divider {
-  height: 1px;
-  background: rgb(188, 188, 188);
-  margin: 3rem 0;
 }
 .redwine__footer .lower {
   display: flex;
@@ -565,5 +567,228 @@ body::-webkit-scrollbar-thumb {
   }
   .redwine__home-intro {
     margin-top: 5rem;
+  }
+}
+
+.redwine__about {
+  padding: 6rem 0;
+  font-family: "Noto Sans", sans-serif;
+}
+.redwine__about-intro {
+  margin-top: 3rem;
+  padding: 0 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.redwine__about-intro .left {
+  width: 100%;
+}
+.redwine__about-intro .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.redwine__about-intro h1 {
+  font-size: 3rem;
+  font-family: "Noto Sans", sans-serif;
+}
+.redwine__about-intro h1 span {
+  color: rgba(150, 19, 19, 0.8);
+}
+.redwine__about-intro h2 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  color: gray;
+}
+.redwine__about .outer {
+  padding: 0 6rem;
+}
+.redwine__about .divider {
+  margin-top: 4rem;
+  height: 2px;
+}
+.redwine__about-img {
+  margin-top: 5rem;
+}
+.redwine__about-influencer {
+  padding: 6rem;
+  padding-top: 2rem;
+  position: relative;
+}
+.redwine__about-influencer .semi1,
+.redwine__about-influencer .semi2 {
+  position: absolute;
+  height: 100px;
+  width: 200px;
+  border-radius: 150px 150px 0 0;
+}
+.redwine__about-influencer .semi1 {
+  top: 0;
+  right: 2rem;
+  background-color: #961313;
+  transform: rotate(40deg);
+}
+.redwine__about-influencer .semi2 {
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform: rotate(-140deg);
+}
+.redwine__about-influencer .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.redwine__about-influencer .title h1 {
+  font-size: 3rem;
+}
+.redwine__about-influencer .title .line {
+  width: 100%;
+  background: #961313;
+  height: 4px;
+}
+.redwine__about-influencer .content {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.redwine__about-influencer .content__left {
+  width: 50rem;
+}
+.redwine__about-influencer .content__left p {
+  margin-bottom: 2rem;
+}
+.redwine__about-influencer .content__right img {
+  border-radius: 1rem;
+}
+@media screen and (max-width: 1380px) {
+  .redwine__about-influencer .left {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1380px) {
+  .redwine__about-influencer .left {
+    width: 100%;
+  }
+}
+.redwine__about-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6rem;
+  padding-top: 0;
+}
+.redwine__about-stats .item {
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.redwine__about-stats .item h1 {
+  font-size: 5rem;
+}
+.redwine__about-team {
+  margin-top: 4rem;
+  padding: 6rem;
+  background: rgb(244, 244, 244);
+}
+.redwine__about-team .title h1 {
+  font-size: 2.5rem;
+}
+.redwine__about-team .content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  grid-gap: 4rem;
+}
+.redwine__about-team .content__card img {
+  border-radius: 5px;
+}
+.redwine__about-team .content__card p {
+  font-size: 0.9rem;
+  color: gray;
+  margin-top: 0.2rem;
+}
+@media screen and (max-width: 1250px) {
+  .redwine__about-intro {
+    padding: 0 1rem;
+  }
+  .redwine__about .outer {
+    padding: 0 1rem;
+  }
+  .redwine__about-stats {
+    padding: 6rem 1rem;
+  }
+  .redwine__about-influencer {
+    padding: 6rem 1rem;
+  }
+  .redwine__about-team {
+    padding: 6rem 1rem;
+  }
+  .redwine__about-team .content {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .redwine__about-intro {
+    margin-top: 0;
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .redwine__about-intro h2 {
+    margin-top: 2rem;
+  }
+  .redwine__about .outer {
+    padding: 0 1rem;
+  }
+  .redwine__about-stats {
+    padding: 6rem 1rem;
+    flex-direction: column;
+  }
+  .redwine__about-stats .item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  .redwine__about-influencer .semi1,
+.redwine__about-influencer .semi2 {
+    display: none;
+  }
+  .redwine__about-influencer .title h1 {
+    font-size: 2rem;
+  }
+  .redwine__about-influencer .content {
+    flex-direction: column-reverse;
+  }
+  .redwine__about-influencer .content__left {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .redwine__about-team {
+    padding: 6rem 1rem;
+  }
+  .redwine__about-team .content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+  .redwine__about-team .content__card {
+    font-size: 0.9rem;
+  }
+  .redwine__about-team .content__card p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 800px) and (max-width: 430px) {
+  .redwine__about-team .content {
+    grid-template-columns: repeat(1, 1fr);
   }
 }/*# sourceMappingURL=index.css.map */

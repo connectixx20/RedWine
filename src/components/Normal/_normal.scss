@@ -1,0 +1,249 @@
+.redwine {
+  $pad: 6rem;
+  &__about {
+    padding: 6rem 0;
+    @include font2;
+
+    &-intro {
+      margin-top: 3rem;
+      padding: 0 6rem;
+      @include center_element;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .left {
+        width: 100%;
+      }
+      .right {
+        @include center_element;
+
+        width: 100%;
+      }
+      h1 {
+        font-size: 3rem;
+
+        @include font2;
+
+        span {
+          color: rgba($primary-color, 0.8);
+        }
+      }
+
+      h2 {
+        @include font2;
+        font-size: 1rem;
+        color: gray;
+      }
+    }
+    .outer {
+      padding: 0 6rem;
+    }
+    .divider {
+      margin-top: 4rem;
+      height: 2px;
+    }
+    &-img {
+      margin-top: 5rem;
+    }
+
+    &-influencer {
+      padding: 6rem;
+      padding-top: 2rem;
+      position: relative;
+
+      .semi1,
+      .semi2 {
+        position: absolute;
+        // top: 50%;
+
+        // transform: translate(-50%, -50%);
+        // top: 0;
+        // right: 0;
+        height: 100px;
+        width: 200px;
+        border-radius: 150px 150px 0 0;
+      }
+      .semi1 {
+        top: 0;
+        right: 2rem;
+        background-color: $primary-color;
+        transform: rotate(40deg);
+      }
+      .semi2 {
+        bottom: 0;
+        left: 0;
+        background-color: black;
+        transform: rotate(-140deg);
+      }
+
+      .title {
+        @include center_element;
+        justify-content: space-between;
+        h1 {
+          font-size: 3rem;
+        }
+        .line {
+          width: 100%;
+          background: $primary-color;
+          height: 4px;
+        }
+      }
+      .content {
+        margin-top: 2rem;
+        @include center_element;
+        justify-content: space-between;
+
+        &__left {
+          width: 50rem;
+          p {
+            margin-bottom: 2rem;
+          }
+        }
+        &__right {
+          img {
+            border-radius: 1rem;
+          }
+        }
+      }
+      @media screen and (max-width: 1380px) {
+        .left {
+          width: 100%;
+        }
+      }
+      @media screen and (max-width: 1380px) {
+        .left {
+          width: 100%;
+        }
+      }
+    }
+
+    &-stats {
+      @include center_element;
+      justify-content: space-between;
+      padding: $pad;
+      padding-top: 0;
+
+      .item {
+        width: 20rem;
+        @include center_element;
+        flex-direction: column;
+        align-items: flex-start;
+
+        h1 {
+          font-size: 5rem;
+        }
+      }
+    }
+    &-team {
+      margin-top: 4rem;
+      padding: $pad;
+      background: rgb(244, 244, 244);
+
+      .title {
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+      .content {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        grid-gap: 4rem;
+        &__card {
+          img {
+            border-radius: 5px;
+          }
+          p {
+            font-size: 0.9rem;
+            color: gray;
+            margin-top: 0.2rem;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1250px) {
+      &-intro {
+        padding: 0 1rem;
+      }
+      .outer {
+        padding: 0 1rem;
+      }
+      &-stats {
+        padding: 6rem 1rem;
+      }
+      &-influencer {
+        padding: 6rem 1rem;
+      }
+      &-team {
+        padding: 6rem 1rem;
+
+        .content {
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 1rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      &-intro {
+        margin-top: 0;
+        padding: 1rem;
+        flex-direction: column;
+
+        h2 {
+          margin-top: 2rem;
+        }
+      }
+      .outer {
+        padding: 0 1rem;
+      }
+      &-stats {
+        padding: 6rem 1rem;
+        flex-direction: column;
+
+        .item:not(:last-child) {
+          // width: 1;
+          margin-bottom: 2rem;
+        }
+      }
+      &-influencer {
+        .semi1,
+        .semi2 {
+          display: none;
+        }
+        .title{
+            h1{
+
+                font-size: 2rem;
+            }
+        }
+        .content {
+          flex-direction: column-reverse;
+          &__left {
+            margin-top: 2rem;
+            width: 100%;
+          }
+        }
+      }
+      &-team {
+        padding: 6rem 1rem;
+
+        .content {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1.5rem;
+
+          &__card {
+            font-size: 0.9rem;
+            p {
+              font-size: 0.8rem;
+            }
+          }
+          @media screen and (max-width: 430px) {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+      }
+    }
+  }
+}

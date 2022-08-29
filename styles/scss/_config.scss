@@ -71,3 +71,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   background: $primary-color;
 }
+
+.divider {
+  height: 1px;
+  background: rgb(188, 188, 188);
+  margin: 3rem 0;
+}

@@ -107,8 +107,8 @@ const Navbar = () => {
                     {
                         navItem.map((item) => (
                             <div className="link__item" key={item.id} onMouseOver={() => setItemDetail({ id: item.id })} onMouseOut={() => !item.isSubmenu && setItemDetail({ id: null })}>
-                                <Link href={`/${item.link}`}>
-                                    <motion.h1 whileTap={{ y: -5 }}>{item.name}</motion.h1 >
+                                <Link href={`/${item.link}`} >
+                                    <motion.h1 whileTap={{ y: -5 }} onMouseOut={() => item.isSubmenu && setItemDetail({ id: null })}>{item.name}</motion.h1 >
                                 </Link>
                                 <div className={`line ${item.id === itemDetail.id ? "active" : ""}`} />
                                 <AnimatePresence>
