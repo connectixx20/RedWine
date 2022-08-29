@@ -118,7 +118,7 @@ const Navbar = () => {
                                             <motion.div className="option" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} onMouseOut={() => item.isSubmenu && setItemDetail({ id: null })}>
                                                 {
                                                     item.subItem.map((subItem) => (
-                                                        <Link href={`/${item.link}/${subItem.link}`}>
+                                                        <Link href={`/${item.link}/${subItem.link}`} key={item.id}>
                                                             <motion.div className="option__item" whileTap={{ x: 5 }}>
                                                                 <h2>{subItem.name}</h2>
                                                             </motion.div>
@@ -185,7 +185,7 @@ const Navbar = () => {
                                                 <motion.div className="option" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} >
                                                     {
                                                         item.subItem.map((subItem) => (
-                                                            <Link href={`/${item.link}/${subItem.link}`}>
+                                                            <Link href={`/${item.link}/${subItem.link}`} key={item.id}>
                                                                 <motion.div className="option__item" whileTap={{ x: 5 }}>
                                                                     <h2>{subItem.name}</h2>
                                                                 </motion.div>
