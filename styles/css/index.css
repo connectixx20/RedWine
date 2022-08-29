@@ -117,7 +117,7 @@ body::-webkit-scrollbar-thumb {
     right: 1rem;
     box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
     width: 10rem;
-    padding: 1rem 1rem 0.5rem;
+    padding: 1rem 1rem 0.5rem 0.5rem;
     border-radius: 4px;
   }
   .redwine__navbar .mob__link-item {
@@ -145,6 +145,17 @@ body::-webkit-scrollbar-thumb {
   .redwine__navbar .mob__link-item .option__item {
     margin-bottom: 0.5rem;
     width: 100%;
+  }
+  .redwine__navbar .mob__link-register {
+    margin-top: 1rem;
+    background: #961313;
+    padding: 0.2rem 1.5rem;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .redwine__footer {

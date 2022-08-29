@@ -4,16 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
 import { setwinWidth } from '../../../redux/slices/util'
-import { AiOutlinePlus,AiOutlineMinus } from "react-icons/ai"
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"
 import { HiMenuAlt3 } from "react-icons/hi"
 import Link from 'next/link'
 
 const Navbar = () => {
-    const [itemDetail, setItemDetail] = useState({ id: null})
+    const [itemDetail, setItemDetail] = useState({ id: null })
     const dispatch = useDispatch()
     const { winWidth } = useSelector((state) => state.util)
     const [showMobMenu, setShowMobMenu] = useState(false)
-    const headerRef=useRef()
+    const headerRef = useRef()
     const navItem = [
         {
             id: 0,
@@ -82,16 +82,16 @@ const Navbar = () => {
         dispatch(setwinWidth(window.innerWidth))
         window.onscroll = (() => {
             if (window.pageYOffset >= 66) {
-              headerRef?.current?.classList?.add("sticky")
+                headerRef?.current?.classList?.add("sticky")
             } else {
-              headerRef?.current?.classList?.remove("sticky");
+                headerRef?.current?.classList?.remove("sticky");
             }
-          })
+        })
     }, [])
 
-    const mobClickHandler=()=>{
-        setShowMobMenu(item=>!item)
-        setItemDetail({id:null})
+    const mobClickHandler = () => {
+        setShowMobMenu(item => !item)
+        setItemDetail({ id: null })
     }
 
     return (
@@ -106,7 +106,7 @@ const Navbar = () => {
                 <div className="link" >
                     {
                         navItem.map((item) => (
-                            <div className="link__item" key={item.id} onMouseOver={() => setItemDetail({ id: item.id })} onMouseOut={() => !item.isSubmenu && setItemDetail({ id: null})}>
+                            <div className="link__item" key={item.id} onMouseOver={() => setItemDetail({ id: item.id })} onMouseOut={() => !item.isSubmenu && setItemDetail({ id: null })}>
                                 <Link href={`/${item.link}`}>
                                     <motion.h1 whileTap={{ y: -5 }}>{item.name}</motion.h1 >
                                 </Link>
@@ -162,7 +162,7 @@ const Navbar = () => {
                         <motion.div className="mob__link" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}>
                             {
                                 navItem.map((item) => (
-                                    <div className="mob__link-item" key={item.id}  onClick={() => setItemDetail({ id: itemDetail.id===item.id ? null: item.id})} >
+                                    <div className="mob__link-item" key={item.id} onClick={() => setItemDetail({ id: itemDetail.id === item.id ? null : item.id })} >
                                         <Link href={`/${item.link}`}>
                                             <motion.h1 whileTap={{ x: 5 }}>{item.name}</motion.h1>
                                         </Link>
@@ -170,11 +170,11 @@ const Navbar = () => {
                                             item.isSubmenu && (
                                                 <>
                                                     {
-                                                        itemDetail.id===item.id  ? (
+                                                        itemDetail.id === item.id ? (
                                                             <AiOutlineMinus size={20} />
 
-                                                            ):(
-                                                                <AiOutlinePlus size={20} />
+                                                        ) : (
+                                                            <AiOutlinePlus size={20} />
                                                         )
                                                     }
                                                 </>
@@ -198,6 +198,11 @@ const Navbar = () => {
                                     </div>
                                 ))
                             }
+                            <Link passHref href={"/register"}>
+                                <motion.div className="mob__link-register" whileTap={{ scale: .96 }}>
+                                    <h2>Register</h2>
+                                </motion.div>
+                            </Link>
                         </motion.div>
                     )
                 }
