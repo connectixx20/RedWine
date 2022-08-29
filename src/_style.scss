@@ -1,0 +1,246 @@
+.redwine {
+  &__navbar {
+    position: fixed;
+    width: 100%;
+
+    z-index: 20;
+    padding: 0 5rem;
+    @include font1;
+    @include center_element;
+    justify-content: space-between;
+
+    .cross {
+      transform: rotate(45deg);
+    }
+    &.sticky {
+      // padding: .5rem 1rem;
+      padding: -0.5rem 5rem;
+      transition: all 0.5s ease-in-out;
+      box-shadow: 0 0 7px #000;
+      background: #fff;
+    }
+
+    &-content {
+      @include center_element;
+
+      .link {
+        @include center_element;
+        &__item {
+          cursor: pointer;
+          margin-right: 1.5rem;
+          position: relative;
+
+          .line {
+            width: 100%;
+            height: 2px;
+            border-radius: 5px;
+            background: $primary-color;
+            width: 0;
+
+            &.active {
+              transition: all 0.3s ease-in;
+              width: 100%;
+            }
+          }
+
+          .option {
+            z-index: 20;
+            background-color: white;
+            border-radius: 5px;
+            padding: 1rem;
+            // width: 100%;
+            width: 12rem;
+            @include card_shadow;
+            position: absolute;
+            top: 3.5rem;
+
+            &__item {
+              margin-bottom: 0.5rem;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .register {
+        margin-left: 3rem;
+        @include button;
+      }
+    }
+
+    @media screen and (max-width: 1370px) {
+      padding: 0 1rem;
+    }
+    @media screen and (max-width: 850px) {
+      &-content {
+        .link {
+          display: none;
+        }
+        .register {
+          display: none;
+        }
+      }
+
+      .mob__link {
+        z-index: 20;
+        background-color: white;
+        position: absolute;
+        top: 4rem;
+        right: 1rem;
+
+        @include card_shadow;
+        width: 10rem;
+        padding: 1rem 1rem 0.5rem;
+        border-radius: 4px;
+
+        &-item {
+          position: relative;
+          @include center_element;
+          justify-content: space-between;
+          flex-direction: row-reverse;
+          h1 {
+            font-size: 1.7rem;
+          }
+          margin-bottom: 0.5rem;
+          .option {
+            background: $secondary-color;
+            right: 10rem;
+            border-radius: 5px;
+            padding: 1rem;
+            // width: 100%;
+            width: 12rem;
+            @include card_shadow;
+            position: absolute;
+            top: 3.5rem;
+
+            &__item {
+              margin-bottom: 0.5rem;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding: 5rem 5rem 1rem;
+    background: rgb(212, 212, 212);
+    h2 {
+      @include font2;
+      color: $primary-color;
+    }
+    p {
+      // font-size: 1.1rem;
+      // font-weight: bold;
+      color: rgb(71, 71, 71);
+      @include font2;
+    }
+    a {
+      // font-weight: bold;
+      color: rgb(71, 71, 71);
+      cursor: pointer;
+      @include font2;
+      // font-size: 1.1rem
+    }
+    .upper {
+      @include center_element;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .detail {
+        p:not(:first-child) {
+          margin: 0.8rem 0;
+        }
+        p:first-child {
+          margin-top: 0.4rem;
+        }
+      }
+
+      .content {
+        @include center_element;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0.8rem;
+
+        a:not(:last-child) {
+          margin-bottom: 0.6rem;
+        }
+        // a:first-child{
+        //     // margin-top: .3rem;
+        // }
+      }
+    }
+
+    .divider {
+      height: 1px;
+      background: rgb(188, 188, 188);
+      margin: 3rem 0;
+    }
+    .lower {
+      // margin-top: 2rem;
+      @include center_element;
+      justify-content: space-around;
+      .copyright {
+        @include center_element;
+      }
+      .link {
+        a:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
+      .social {
+        @include center_element;
+
+        svg {
+          color: $primary-color;
+          font-size: 1.5rem;
+        }
+        .item {
+          cursor: pointer;
+          padding: 0.7rem;
+          background: $secondary-color;
+          border-radius: 50%;
+          @include center_element;
+          @include card_shadow;
+
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+
+          &:hover {
+            transition: all 0.5s ease-in-out;
+            background: $primary-color;
+
+            svg {
+              transition: all 0.5s ease-in-out;
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width:1150px) {
+        padding: 5rem 1rem 1rem;
+    }
+
+    @media screen and (max-width:800px) {
+        padding: 5rem 1rem 1rem;
+
+        .upper{
+            flex-direction: column;
+
+            &>*:not(:last-child){
+                margin-bottom: 1.5rem;
+            }
+        }
+        .lower{
+            flex-direction: column;
+
+            .link{
+                margin: 1.5rem 0;
+            }
+        }
+    }
+  }
+}

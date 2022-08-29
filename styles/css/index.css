@@ -1,0 +1,558 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Noto+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: #961313;
+}
+
+.redwine__navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  padding: 0 5rem;
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.redwine__navbar .cross {
+  transform: rotate(45deg);
+}
+.redwine__navbar.sticky {
+  padding: -0.5rem 5rem;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 7px #000;
+  background: #fff;
+}
+.redwine__navbar-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redwine__navbar-content .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redwine__navbar-content .link__item {
+  cursor: pointer;
+  margin-right: 1.5rem;
+  position: relative;
+}
+.redwine__navbar-content .link__item .line {
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background: #961313;
+  width: 0;
+}
+.redwine__navbar-content .link__item .line.active {
+  transition: all 0.3s ease-in;
+  width: 100%;
+}
+.redwine__navbar-content .link__item .option {
+  z-index: 20;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 12rem;
+  box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
+  position: absolute;
+  top: 3.5rem;
+}
+.redwine__navbar-content .link__item .option__item {
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.redwine__navbar-content .register {
+  margin-left: 3rem;
+  background: #961313;
+  padding: 0.2rem 1.5rem;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 1370px) {
+  .redwine__navbar {
+    padding: 0 1rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .redwine__navbar-content .link {
+    display: none;
+  }
+  .redwine__navbar-content .register {
+    display: none;
+  }
+  .redwine__navbar .mob__link {
+    z-index: 20;
+    background-color: white;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
+    width: 10rem;
+    padding: 1rem 1rem 0.5rem;
+    border-radius: 4px;
+  }
+  .redwine__navbar .mob__link-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 0.5rem;
+  }
+  .redwine__navbar .mob__link-item h1 {
+    font-size: 1.7rem;
+  }
+  .redwine__navbar .mob__link-item .option {
+    background: #fff;
+    right: 10rem;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 12rem;
+    box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
+    position: absolute;
+    top: 3.5rem;
+  }
+  .redwine__navbar .mob__link-item .option__item {
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+}
+.redwine__footer {
+  padding: 5rem 5rem 1rem;
+  background: rgb(212, 212, 212);
+}
+.redwine__footer h2 {
+  font-family: "Noto Sans", sans-serif;
+  color: #961313;
+}
+.redwine__footer p {
+  color: rgb(71, 71, 71);
+  font-family: "Noto Sans", sans-serif;
+}
+.redwine__footer a {
+  color: rgb(71, 71, 71);
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+}
+.redwine__footer .upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.redwine__footer .upper .detail p:not(:first-child) {
+  margin: 0.8rem 0;
+}
+.redwine__footer .upper .detail p:first-child {
+  margin-top: 0.4rem;
+}
+.redwine__footer .upper .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0.8rem;
+}
+.redwine__footer .upper .content a:not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+.redwine__footer .divider {
+  height: 1px;
+  background: rgb(188, 188, 188);
+  margin: 3rem 0;
+}
+.redwine__footer .lower {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.redwine__footer .lower .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redwine__footer .lower .link a:not(:last-child) {
+  margin-right: 3rem;
+}
+.redwine__footer .lower .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redwine__footer .lower .social svg {
+  color: #961313;
+  font-size: 1.5rem;
+}
+.redwine__footer .lower .social .item {
+  cursor: pointer;
+  padding: 0.7rem;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
+}
+.redwine__footer .lower .social .item:not(:last-child) {
+  margin-right: 1rem;
+}
+.redwine__footer .lower .social .item:hover {
+  transition: all 0.5s ease-in-out;
+  background: #961313;
+}
+.redwine__footer .lower .social .item:hover svg {
+  transition: all 0.5s ease-in-out;
+  color: #fff;
+}
+@media screen and (max-width: 1150px) {
+  .redwine__footer {
+    padding: 5rem 1rem 1rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .redwine__footer {
+    padding: 5rem 1rem 1rem;
+  }
+  .redwine__footer .upper {
+    flex-direction: column;
+  }
+  .redwine__footer .upper > *:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  .redwine__footer .lower {
+    flex-direction: column;
+  }
+  .redwine__footer .lower .link {
+    margin: 1.5rem 0;
+  }
+}
+
+.redwine__home {
+  font-family: "Alumni Sans Pinstripe", sans-serif;
+  padding: 6rem;
+}
+.redwine__home h1 {
+  font-size: 2.5rem;
+  font-family: "Noto Sans", sans-serif;
+}
+.redwine__home p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.redwine__home h2 {
+  font-size: 1.7rem;
+}
+.redwine__home-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.redwine__home-intro .detail h2 {
+  font-size: 2rem;
+}
+.redwine__home-intro .detail p {
+  margin: 2rem 0 5rem;
+  width: 40rem;
+}
+.redwine__home-intro .detail .btn {
+  background: #961313;
+  padding: 0.2rem 1.5rem;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redwine__home-intro .image img {
+  width: 100% !important;
+}
+@media screen and (max-width: 1250px) {
+  .redwine__home-intro .detail p {
+    width: 100%;
+  }
+  .redwine__home-intro .image {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .redwine__home-intro {
+    flex-direction: column-reverse;
+  }
+  .redwine__home-intro .detail {
+    margin-top: 4rem;
+  }
+  .redwine__home-intro .detail p {
+    width: 100%;
+    margin: 2rem 0 3rem;
+  }
+  .redwine__home-intro .detail .btn {
+    width: 100%;
+  }
+}
+.redwine__home .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.redwine__home .title .line {
+  width: 100%;
+  background: #961313;
+  height: 4px;
+}
+.redwine__home-influencer {
+  margin-top: 5rem;
+}
+.redwine__home-influencer .content {
+  padding: 2rem;
+}
+.redwine__home-influencer .content .swiper {
+  padding: 2rem;
+}
+.redwine__home-influencer .content__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  background: #000;
+  background-clip: padding-box; /* !importanté */
+  border: solid 2px transparent; /* !importanté */
+  border-radius: 1em;
+}
+.redwine__home-influencer .content__card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px; /* !importanté */
+  border-radius: inherit; /* !importanté */
+  background: linear-gradient(to right, #961313, black);
+}
+.redwine__home-influencer .content__card img {
+  border-radius: 1rem;
+}
+.redwine__home-influencer .content__card .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+}
+.redwine__home-influencer .content__card .inner h2 {
+  font-family: "Noto Sans", sans-serif;
+  color: #961313;
+}
+.redwine__home-influencer .content__card .inner p {
+  color: white;
+}
+.redwine__home-influencer .content__card .inner:hover {
+  transition: all 0.8s ease-out;
+  background: rgba(0, 0, 0, 0.3);
+}
+.redwine__home-influencer .content__card:hover .inner {
+  display: flex;
+}
+.redwine__home-influencer .content__card:hover img {
+  transition: all 1s ease-in;
+}
+.redwine__home-services {
+  margin-top: 5rem;
+}
+.redwine__home-services .title {
+  align-items: flex-start;
+}
+.redwine__home-services .content {
+  margin-top: 2rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-gap: 2rem;
+  justify-content: space-around;
+}
+.redwine__home-services .content__card {
+  width: 29rem;
+  box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
+  padding: 2rem;
+  border-radius: 5px;
+}
+.redwine__home-services .content__card h2 {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0.4rem 0 1rem;
+}
+@media screen and (max-width: 600px) {
+  .redwine__home-services .content {
+    padding: 2rem 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .redwine__home-services .content__card {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+.redwine__home-testimonial {
+  margin-top: 5rem;
+  overflow-x: hidden;
+}
+.redwine__home-testimonial h2 {
+  font-family: "Noto Sans", sans-serif;
+}
+.redwine__home-testimonial__content {
+  margin-top: 5rem;
+}
+.redwine__home-testimonial__content .swiper-button-prev,
+.redwine__home-testimonial__content .swiper-button-next {
+  color: #961313;
+}
+.redwine__home-testimonial__content-upper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.redwine__home-testimonial__content-upper .title {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.redwine__home-testimonial__content-upper .title p:last-child {
+  margin-top: 1.3rem;
+  width: 50%;
+}
+@media screen and (max-width: 1050px) {
+  .redwine__home-testimonial__content-upper .title {
+    width: 100%;
+  }
+  .redwine__home-testimonial__content-upper .title p {
+    width: 100% !important;
+  }
+}
+.redwine__home-testimonial__content-upper iframe {
+  border: 5px solid #961313;
+}
+.redwine__home-testimonial__content-lower {
+  margin-top: 3rem;
+}
+.redwine__home-testimonial__content-lower .card {
+  cursor: pointer;
+}
+.redwine__home-testimonial__content-lower .card-show {
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 4px;
+  background: #961313;
+}
+@media screen and (max-width: 1400px) {
+  .redwine__home-testimonial {
+    padding: 5rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .redwine__home-testimonial {
+    padding: 3rem;
+  }
+  .redwine__home-testimonial__content-upper {
+    flex-direction: column-reverse;
+  }
+  .redwine__home-testimonial__content-upper .video {
+    width: 100%;
+  }
+  .redwine__home-testimonial__content-upper .video iframe {
+    width: 100% !important;
+    height: 16rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .redwine__home-testimonial {
+    padding: 2rem;
+  }
+  .redwine__home-testimonial__title h1 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .redwine__home-testimonial {
+    padding: 0;
+    margin-top: 4rem;
+  }
+  .redwine__home-testimonial__content {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 1370px) {
+  .redwine__home {
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .redwine__home h1 {
+    font-size: 2rem;
+  }
+  .redwine__home p {
+    font-size: 1.3rem;
+  }
+  .redwine__home h2 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .redwine__home {
+    padding: 1rem;
+  }
+  .redwine__home-intro {
+    margin-top: 5rem;
+  }
+}/*# sourceMappingURL=index.css.map */
