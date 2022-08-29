@@ -49,7 +49,7 @@ const Footer = () => {
                     </div>
                     <div className="quick__content content">
                         {quickLinks.map((item) => (
-                            <Link className="item" href={`/${item.url}`}>
+                            <Link className="item" href={`/${item.url}`} key={item.name}>
                                 <motion.a whileTap={{x:5}}>{item.name}</motion.a>
                             </Link>
                         ))}
@@ -61,7 +61,7 @@ const Footer = () => {
                     </div>
                     <div className="influencer__content content">
                         {influencerLinks.map((item) => (
-                            <Link className="item" href={`/influencer/${item.url}`}>
+                            <Link className="item" href={`/influencer/${item.url}`} key={item.name}>
                                 <motion.a whileTap={{x:5}}>{item.name}</motion.a>
                             </Link>
                         ))}
@@ -73,7 +73,7 @@ const Footer = () => {
                     </div>
                     <div className="services__content content">
                         {serviceLinks.map((item) => (
-                            <Link className="item" href={`/services/${item.url}`}>
+                            <Link className="item" href={`/services/${item.url}`} key={item.name}>
                                 <motion.a whileTap={{x:5}}>{item.name}</motion.a>
                             </Link>
                         ))}
