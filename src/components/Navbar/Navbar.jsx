@@ -7,21 +7,28 @@ import { setwinWidth } from '../../../redux/slices/util'
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"
 import { HiMenuAlt3 } from "react-icons/hi"
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
     const [itemDetail, setItemDetail] = useState({ id: null })
     const dispatch = useDispatch()
+    const router=useRouter()
     const { winWidth } = useSelector((state) => state.util)
     const [showMobMenu, setShowMobMenu] = useState(false)
     const headerRef = useRef()
     const navItem = [
         {
             id: 0,
+            name: "Home",
+            link: ""
+        },
+        {
+            id: 1,
             name: "About Us",
             link: "about"
         },
         {
-            id: 1,
+            id: 2,
             name: "Influencer",
             link: "influencer",
             isSubmenu: true,
@@ -49,12 +56,12 @@ const Navbar = () => {
             ]
         },
         {
-            id: 2,
+            id: 3,
             name: "Contact",
             link: "contact"
         },
         {
-            id: 3,
+            id: 4,
             name: "Services",
             link: "services",
             isSubmenu: true,
@@ -89,10 +96,17 @@ const Navbar = () => {
         })
     }, [])
 
+
+    function isActivePage(item) {
+        return router.pathname === `/${item.link}`
+    }
+
     const mobClickHandler = () => {
         setShowMobMenu(item => !item)
         setItemDetail({ id: null })
     }
+
+
 
     return (
         <header className="redwine__navbar" ref={headerRef} >
@@ -106,11 +120,12 @@ const Navbar = () => {
                 <div className="link" >
                     {
                         navItem.map((item) => (
-                            <div className="link__item" key={item.id} onMouseOver={() => setItemDetail({ id: item.id })} onMouseOut={() => !item.isSubmenu && setItemDetail({ id: null })}>
+                            <div className={`link__item ${isActivePage(item) ? "active" :""}`} key={item.id} onMouseOver={() => setItemDetail({ id: item.id })} onMouseOut={() => !item.isSubmenu && setItemDetail({ id: null })}>
                                 <Link href={`/${item.link}`} >
                                     <motion.h1 whileTap={{ y: -5 }} onMouseOut={() => item.isSubmenu && setItemDetail({ id: null })}>{item.name}</motion.h1 >
+                                    
                                 </Link>
-                                <div className={`line ${item.id === itemDetail.id ? "active" : ""}`} />
+                                <div className={`line ${(item.id === itemDetail.id || isActivePage(item)) ? "active" : ""}`} />
                                 <AnimatePresence>
 
                                     {
