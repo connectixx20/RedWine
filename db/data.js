@@ -3,7 +3,7 @@ export const testimonialData=[
         id: 1,
         img: "https://res.cloudinary.com/redwine/image/upload/v1643723869/Home/photo-1570612861542-284f4c12e75f_olvy7k.jpg",
         name: "Jhon McAffe",
-        vid: "aWJgIETz-Kk",
+        vid: "upFoXg7myu8",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam minus quis illum quam optio vitae, id dolorum maxime ipsum consequatur numquam beatae officia consectetur animi commodi alias nesciunt aspernatur!",
         company: "McAffee"
     },
@@ -11,7 +11,7 @@ export const testimonialData=[
         id: 2,
         img: "https://res.cloudinary.com/redwine/image/upload/v1643723869/Home/photo-1570612861542-284f4c12e75f_olvy7k.jpg",
         name: "Dark Seid",
-        vid: "UfuJ3D5NnJU",
+        vid: "CHSnz0bCaUk",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam minus quis illum quam optio vitae, id dolorum maxime ipsum consequatur numquam beatae officia consectetur animi commodi alias nesciunt aspernatur!",
         company: "McAffee"
     },
@@ -19,7 +19,7 @@ export const testimonialData=[
         id: 3,
         img: "https://res.cloudinary.com/redwine/image/upload/v1643723869/Home/photo-1570612861542-284f4c12e75f_olvy7k.jpg",
         name: "Jhon McAffe",
-        vid: "aWJgIETz-Kk",
+        vid: "upFoXg7myu8",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam minus quis illum quam optio vitae, id dolorum maxime ipsum consequatur numquam beatae officia consectetur animi commodi alias nesciunt aspernatur!",
         company: "McAffee"
     },
@@ -27,7 +27,7 @@ export const testimonialData=[
         id: 4,
         img: "https://res.cloudinary.com/redwine/image/upload/v1643723869/Home/photo-1570612861542-284f4c12e75f_olvy7k.jpg",
         name: "DarkSeid",
-        vid: "UfuJ3D5NnJU",
+        vid: "CHSnz0bCaUk",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam minus quis illum quam optio vitae, id dolorum maxime ipsum consequatur numquam beatae officia consectetur animi commodi alias nesciunt aspernatur!",
         company: "McAffee"
     },
@@ -35,7 +35,7 @@ export const testimonialData=[
         id: 5,
         img: "https://res.cloudinary.com/redwine/image/upload/v1643723869/Home/photo-1570612861542-284f4c12e75f_olvy7k.jpg",
         name: "Jhon McAffe",
-        vid: "aWJgIETz-Kk",
+        vid: "upFoXg7myu8",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam minus quis illum quam optio vitae, id dolorum maxime ipsum consequatur numquam beatae officia consectetur animi commodi alias nesciunt aspernatur!",
         company: "McAffee"
     },
@@ -43,7 +43,7 @@ export const testimonialData=[
         id: 6,
         img: "https://res.cloudinary.com/redwine/image/upload/v1643723869/Home/photo-1570612861542-284f4c12e75f_olvy7k.jpg",
         name: "Jhon McAffe",
-        vid: "UfuJ3D5NnJU",
+        vid: "CHSnz0bCaUk",
         info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam minus quis illum quam optio vitae, id dolorum maxime ipsum consequatur numquam beatae officia consectetur animi commodi alias nesciunt aspernatur!",
         company: "McAffee"
     },

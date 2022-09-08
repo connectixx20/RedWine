@@ -14,6 +14,10 @@ export const rootReducer=combineReducers({
 const persistConfig={
     key:"root",
     blacklist:[
+        'util'
+    ],
+    whitelist:[
+        'util.winWidth'
     ],
     storage
 }

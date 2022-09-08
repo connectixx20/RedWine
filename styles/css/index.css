@@ -275,6 +275,236 @@ body::-webkit-scrollbar-thumb {
     margin: 1.5rem 0;
   }
 }
+.redwine__test {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.redwine__register {
+  z-index: 343;
+  background: white;
+  width: 33rem;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
+  flex-direction: column;
+  padding: 2rem;
+  position: relative;
+  border-radius: 5px;
+}
+.redwine__register-cancel {
+  cursor: pointer;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+}
+.redwine__register-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.redwine__register-title h1 {
+  color: #961313;
+}
+.redwine__register .error {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  color: red;
+}
+.redwine__register-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.redwine__register-submit .next,
+.redwine__register-submit .prev {
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #961313;
+  color: #fff;
+  width: 100%;
+  cursor: pointer;
+}
+.redwine__register-submit .next h3,
+.redwine__register-submit .prev h3 {
+  color: white;
+}
+.redwine__register-content {
+  width: 100%;
+}
+.redwine__register-content h3 {
+  color: #961313;
+}
+.redwine__register-content .item {
+  margin-bottom: 2rem;
+}
+.redwine__register-content .name input {
+  background: rgb(232, 232, 232);
+  margin-top: 0.2rem;
+  box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 3px;
+}
+.redwine__register-content .title {
+  margin-bottom: 1rem;
+}
+.redwine__register-content .MuiFilledInput::after {
+  border-bottom-color: red;
+}
+.redwine__register-content .platform .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.redwine__register-content .platform .content__item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: rgb(232, 232, 232);
+  padding: 1rem 0.5rem;
+}
+.redwine__register-content .platform .content__item img {
+  filter: grayscale(100%);
+}
+.redwine__register-content .platform .content__item:hover {
+  background-color: rgb(162, 162, 162);
+  transition: all 0.5s ease-in-out;
+}
+.redwine__register-content .platform .content__item:hover img {
+  transition: all 0.5s ease-in-out;
+  filter: grayscale(0%);
+}
+.redwine__register-content .platform .content__item.active {
+  box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
+  background-color: rgb(185, 185, 185);
+}
+.redwine__register-content .platform .content__item.active img {
+  filter: grayscale(0%);
+}
+.redwine__register-content .reason .content__item {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgb(232, 232, 232);
+  border-radius: 4px;
+}
+.redwine__register-content .reason .content__item .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+}
+.redwine__register-content .reason .content__item:first-child {
+  margin-bottom: 1rem;
+}
+.redwine__register-content .reason .content__item:hover .dot, .redwine__register-content .reason .content__item.active .dot {
+  transition: all 0.5s ease-in-out;
+  background: #961313;
+}
+.redwine__register .handle .css-5z923u-MuiInputBase-root-MuiFilledInput-root:after {
+  border-bottom: 2px solid #961313;
+}
+.redwine__register .handle .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.redwine__register .handle .content__item:first-child {
+  margin-right: 1rem;
+}
+.redwine__register .follower .MuiSlider-root {
+  color: #961313 !important;
+}
+.redwine__register .genre .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.redwine__register .genre .content .Mui-checked {
+  color: #961313;
+}
+.redwine__register .genre .content__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+.redwine__register .brand input,
+.redwine__register .contact input,
+.redwine__register .email input {
+  background: rgb(232, 232, 232);
+  margin-top: 0.2rem;
+  box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 3px;
+}
+@media screen and (max-width: 500px) {
+  .redwine__register .handle .content {
+    flex-direction: column;
+  }
+  .redwine__register .handle .content__item:first-child {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .redwine__register .handle .content__item {
+    width: 100%;
+  }
+  .redwine__register .genre .content {
+    grid-template-columns: repeat(1, 1fr);
+    height: 10rem;
+    overflow-y: scroll;
+    /* Track */
+    /* Handle */
+  }
+  .redwine__register .genre .content::-webkit-scrollbar {
+    width: 4px;
+  }
+  .redwine__register .genre .content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  .redwine__register .genre .content::-webkit-scrollbar-thumb {
+    background: #961313;
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .redwine__register {
+    font-size: 0.9rem;
+  }
+}
+.redwine__modal-reg {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  z-index: 33;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%) !important;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+@media screen and (max-width: 500px) {
+  .redwine__modal-reg {
+    padding: 1rem;
+  }
+}
 
 .redwine__home {
   font-family: "Alumni Sans Pinstripe", sans-serif;
@@ -550,7 +780,7 @@ body::-webkit-scrollbar-thumb {
 }
 @media screen and (max-width: 1370px) {
   .redwine__home {
-    padding: 1rem 2rem;
+    padding: 6rem 2rem;
   }
 }
 @media screen and (max-width: 800px) {

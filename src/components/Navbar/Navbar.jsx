@@ -3,18 +3,22 @@ import React, { useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { setwinWidth } from '../../../redux/slices/util'
+import { setwinWidth,setShowRegister } from '../../../redux/slices/util'
+
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai"
 import { HiMenuAlt3 } from "react-icons/hi"
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import RegModal from '../Register/modal'
 
 const Navbar = () => {
     const [itemDetail, setItemDetail] = useState({ id: null })
     const dispatch = useDispatch()
-    const router=useRouter()
-    const { winWidth } = useSelector((state) => state.util)
+    const router = useRouter()
+    const { winWidth,form } = useSelector((state) => state.util)
     const [showMobMenu, setShowMobMenu] = useState(false)
+    // const [showRegister, setShowRegister] = useState(false)
+
     const headerRef = useRef()
     const navItem = [
         {
@@ -85,8 +89,10 @@ const Navbar = () => {
         },
     ]
 
+
     useEffect(() => {
         dispatch(setwinWidth(window.innerWidth))
+        
         window.onscroll = (() => {
             if (window.pageYOffset >= 66) {
                 headerRef?.current?.classList?.add("sticky")
@@ -95,6 +101,10 @@ const Navbar = () => {
             }
         })
     }, [])
+
+    useEffect(()=>{
+
+    },[form])
 
 
     function isActivePage(item) {
@@ -107,97 +117,29 @@ const Navbar = () => {
     }
 
 
-
+    
     return (
-        <header className="redwine__navbar" ref={headerRef} >
-            <div className="redwine__navbar-logo">
-                <Image src={"/logo.png"} width={winWidth < 850 ? 130 : 150} height={winWidth < 850 ? 80 : 100} objectFit="contain" loading="eager" />
-            </div>
-
-
-
-            <div className="redwine__navbar-content">
-                <div className="link" >
-                    {
-                        navItem.map((item) => (
-                            <div className={`link__item ${isActivePage(item) ? "active" :""}`} key={item.id} onMouseOver={() => setItemDetail({ id: item.id })} onMouseOut={() => !item.isSubmenu && setItemDetail({ id: null })}>
-                                <Link href={`/${item.link}`} >
-                                    <motion.h1 whileTap={{ y: -5 }} onMouseOut={() => item.isSubmenu && setItemDetail({ id: null })}>{item.name}</motion.h1 >
-                                    
-                                </Link>
-                                <div className={`line ${(item.id === itemDetail.id || isActivePage(item)) ? "active" : ""}`} />
-                                <AnimatePresence>
-
-                                    {
-                                        (item.isSubmenu && item.id === itemDetail.id) && (
-                                            <motion.div className="option" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} onMouseOut={() => item.isSubmenu && setItemDetail({ id: null })}>
-                                                {
-                                                    item.subItem.map((subItem) => (
-                                                        <Link href={`/${item.link}/${subItem.link}`} key={item.id}>
-                                                            <motion.div className="option__item" whileTap={{ x: 5 }}>
-                                                                <h2>{subItem.name}</h2>
-                                                            </motion.div>
-                                                        </Link>
-                                                    ))
-                                                }
-                                            </motion.div>
-                                        )
-                                    }
-                                </AnimatePresence>
-                            </div>
-                        ))
-                    }
+        <>
+            <header className="redwine__navbar" ref={headerRef} >
+                <div className="redwine__navbar-logo">
+                    <Image src={"/logo.png"} width={winWidth < 850 ? 130 : 150} height={winWidth < 850 ? 80 : 100} objectFit="contain" loading="eager" />
                 </div>
-                <Link passHref href={"/register"}>
-                    <motion.div className="register" whileTap={{ scale: .97 }}>
-                        <h1>Register</h1>
-                    </motion.div>
-                </Link>
 
-                {
-                    winWidth < 850 && (
-                        <div onClick={mobClickHandler}>
-                            {
-                                !showMobMenu ? (
-                                    <HiMenuAlt3 size={35} />
+                <div className="redwine__navbar-content">
+                    <div className="link" >
+                        {
+                            navItem.map((item) => (
+                                <div className={`link__item ${isActivePage(item) ? "active" : ""}`} key={item.id} onMouseOver={() => setItemDetail({ id: item.id })} onMouseOut={() => !item.isSubmenu && setItemDetail({ id: null })}>
+                                    <Link href={`/${item.link}`} >
+                                        <motion.h1 whileTap={{ y: -5 }} onMouseOut={() => item.isSubmenu && setItemDetail({ id: null })}>{item.name}</motion.h1 >
 
-                                ) : (
-                                    <AiOutlinePlus size={35} className="cross" />
-                                )
-                            }
-                        </div>
-                    )
-                }
+                                    </Link>
+                                    <div className={`line ${(item.id === itemDetail.id || isActivePage(item)) ? "active" : ""}`} />
+                                    <AnimatePresence>
 
-            </div>
-            <AnimatePresence>
-                {
-
-                    showMobMenu && (
-                        <motion.div className="mob__link" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}>
-                            {
-                                navItem.map((item) => (
-                                    <div className="mob__link-item" key={item.id} onClick={() => setItemDetail({ id: itemDetail.id === item.id ? null : item.id })} >
-                                        <Link href={`/${item.link}`}>
-                                            <motion.h1 whileTap={{ x: 5 }}>{item.name}</motion.h1>
-                                        </Link>
-                                        {
-                                            item.isSubmenu && (
-                                                <>
-                                                    {
-                                                        itemDetail.id === item.id ? (
-                                                            <AiOutlineMinus size={20} />
-
-                                                        ) : (
-                                                            <AiOutlinePlus size={20} />
-                                                        )
-                                                    }
-                                                </>
-                                            )
-                                        }
                                         {
                                             (item.isSubmenu && item.id === itemDetail.id) && (
-                                                <motion.div className="option" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} >
+                                                <motion.div className="option" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} onMouseOut={() => item.isSubmenu && setItemDetail({ id: null })}>
                                                     {
                                                         item.subItem.map((subItem) => (
                                                             <Link href={`/${item.link}/${subItem.link}`} key={item.id}>
@@ -210,19 +152,95 @@ const Navbar = () => {
                                                 </motion.div>
                                             )
                                         }
-                                    </div>
-                                ))
-                            }
-                            <Link passHref href={"/register"}>
-                                <motion.div className="mob__link-register" whileTap={{ scale: .96 }}>
+                                    </AnimatePresence>
+                                </div>
+                            ))
+                        }
+                    </div>
+
+                    <motion.div className="register" whileTap={{ scale: .97 }} onClick={() => dispatch(setShowRegister(true))}>
+                        <h1>Register</h1>
+                    </motion.div>
+
+
+                    {
+                        winWidth < 850 && (
+                            <div onClick={mobClickHandler}>
+                                {
+                                    !showMobMenu ? (
+                                        <HiMenuAlt3 size={35} />
+
+                                    ) : (
+                                        <AiOutlinePlus size={35} className="cross" />
+                                    )
+                                }
+                            </div>
+                        )
+                    }
+
+                </div>
+                <AnimatePresence>
+                    {
+
+                        showMobMenu && (
+                            <motion.div className="mob__link" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}>
+                                {
+                                    navItem.map((item) => (
+                                        <div className="mob__link-item" key={item.id} onClick={() => setItemDetail({ id: itemDetail.id === item.id ? null : item.id })} >
+                                            <Link href={`/${item.link}`}>
+                                                <motion.h1 whileTap={{ x: 5 }}>{item.name}</motion.h1>
+                                            </Link>
+                                            {
+                                                item.isSubmenu && (
+                                                    <>
+                                                        {
+                                                            itemDetail.id === item.id ? (
+                                                                <AiOutlineMinus size={20} />
+
+                                                            ) : (
+                                                                <AiOutlinePlus size={20} />
+                                                            )
+                                                        }
+                                                    </>
+                                                )
+                                            }
+                                            {
+                                                (item.isSubmenu && item.id === itemDetail.id) && (
+                                                    <motion.div className="option" initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }} >
+                                                        {
+                                                            item.subItem.map((subItem) => (
+                                                                <Link href={`/${item.link}/${subItem.link}`} key={item.id}>
+                                                                    <motion.div className="option__item" whileTap={{ x: 5 }}>
+                                                                        <h2>{subItem.name}</h2>
+                                                                    </motion.div>
+                                                                </Link>
+                                                            ))
+                                                        }
+                                                    </motion.div>
+                                                )
+                                            }
+                                        </div>
+                                    ))
+                                }
+
+                                <motion.div className="mob__link-register" whileTap={{ scale: .96 }} onClick={() => dispatch(setShowRegister(true))}>
                                     <h2>Register</h2>
                                 </motion.div>
-                            </Link>
-                        </motion.div>
+
+                            </motion.div>
+                        )
+                    }
+                </AnimatePresence>
+            </header>
+            <AnimatePresence>
+
+                {
+                    form && (
+                        <RegModal  />
                     )
                 }
             </AnimatePresence>
-        </header>
+        </>
     )
 }
 

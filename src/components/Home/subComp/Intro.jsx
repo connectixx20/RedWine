@@ -1,13 +1,17 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { setShowRegister } from '../../../../redux/slices/util'
+import { useDispatch } from 'react-redux'
 
 const Intro = () => {
+  const dispatch=useDispatch()
+
   return (
     <div className="redwine__home-intro">
         <div className="detail">
             <motion.h1 initial={{y:20,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1}} >RedWine Degital <br />A Influencer Marketing Company</motion.h1>
             <motion.p initial={{y:40,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae incidunt nam quibusdam. Magnam beatae nobis iste molestiae quia. Cum ea nostrum nemo numquam, esse at perspiciatis ex alias beatae similique?</motion.p>
-            <motion.div className="btn" initial={{y:60,opacity:0}} animate={{y:0,opacity:1,transition:{duration:1}}}  whileTap={{scale:0.97}}>
+            <motion.div className="btn" initial={{y:60,opacity:0}} animate={{y:0,opacity:1,transition:{duration:1}}}  whileTap={{scale:0.97}} onClick={()=>dispatch(setShowRegister(true))}>
                 <h2>Register</h2>
             </motion.div>
         </div>
