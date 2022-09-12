@@ -212,11 +212,10 @@
         .semi2 {
           display: none;
         }
-        .title{
-            h1{
-
-                font-size: 2rem;
-            }
+        .title {
+          h1 {
+            font-size: 2rem;
+          }
         }
         .content {
           flex-direction: column-reverse;
@@ -242,6 +241,132 @@
           @media screen and (max-width: 430px) {
             grid-template-columns: repeat(1, 1fr);
           }
+        }
+      }
+    }
+  }
+
+  &__contact {
+    @include font2;
+    &-upper {
+      background-image: linear-gradient(
+        to right top,
+        #961313,
+        #bd4f67,
+        #cf8cae,
+        #dec8e1,
+        #ffffff
+      );
+      // background-image: linear-gradient(to right top, #926ac7, #aa8fd8, #c3b5e7, #e0daf4, #ffffff);
+      // background: #926ac7;
+      background: #e8e8e8;
+      // background: $primary-color;
+      width: 100%;
+      height: 50vh;
+      margin-bottom: 45rem;
+    }
+    .outer {
+      width: 100%;
+      @include center_element;
+      position: absolute;
+      top: 12rem;
+      padding: 1rem;
+    }
+
+    .error{
+      color: red !important;
+      font-size: .8rem !important;
+    }
+    &-form {
+      width: 80rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      input,
+      textarea {
+        width: 100%;
+      }
+      background: white;
+      @include card_shadow;
+
+      .title {
+        @include center_element;
+        h1 {
+          color: $primary-color;
+          font-size: 2.3rem;
+        }
+      }
+      .content {
+        input,
+        textarea {
+          border: 1px solid rgb(191, 191, 191);
+          padding: 1rem;
+          font: inherit;
+        }
+        .item {
+          width: 100%;
+          // margin-top: 3rem;
+          p {
+            margin-bottom: 0.5rem;
+            color: gray;
+            font-size: 0.9rem;
+          }
+        }
+        &__row {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 2rem;
+          width: 100%;
+          margin-top: 3rem;
+        }
+
+        &__message {
+          margin-top: 3rem;
+        }
+
+        &__policy {
+          margin: 0.5rem 0 3rem;
+          p {
+            color: gray;
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .outer__shell {
+        @include center_element;
+        border-radius: 5px;
+      }
+      .submit {
+        cursor: pointer;
+        padding: 1rem;
+        width: 10rem;
+        background: $primary-color;
+        color: white;
+        @include card_shadow;
+        border-radius: 4px;
+      }
+    }
+
+
+    @media screen and (max-width:600px) {
+      &-upper{
+        margin-bottom: 57rem;
+      }
+      &-form{
+        padding: 2rem 1rem;
+        .content{
+          &__row{
+            margin-top: 2rem;
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 1rem;
+          }
+
+          &__message{
+            margin-top: 2rem;
+
+          }
+        }
+        .submit{
+          width: 100%;
         }
       }
     }
