@@ -48,12 +48,12 @@ const Contact = () => {
                         <div className="content__row">
                             <div className="company item">
                                 <p>Phone No*</p>
-                                <input type="number" placeholder='Jhon Doe' {...register("phone", { required: true })} />
+                                <input type="number" placeholder='+91-xxxxx-xxxxx' {...register("phone", { required: true })} />
                                 {isRequiredError("phone")}
                             </div>
                             <div className="state item">
                                 <p>State*</p>
-                                <input type="text" placeholder='Jhon Doe' {...register("state", { required: true })} />
+                                <input type="text" placeholder='Maharashtra' {...register("state", { required: true })} />
                                 {isRequiredError("state")}
                             </div>
                         </div>
