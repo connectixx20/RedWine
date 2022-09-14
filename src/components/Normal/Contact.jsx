@@ -40,7 +40,7 @@ const Contact = () => {
                                 {isRequiredError("name")}
                             </div>
                             <div className="email item">
-                                <p>Your Name*</p>
+                                <p>Your Email*</p>
                                 <input type="email" placeholder='you@example.com' {...register("email", { required: true })} />
                                 {isRequiredError("email")}
                             </div>

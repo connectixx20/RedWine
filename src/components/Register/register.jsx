@@ -57,7 +57,7 @@ const Register = () => {
     return (
         <>
         <ToastContainer delay={2000} position="top-right"  />
-            <motion.div className="redwine__register" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0, opacity: 0 }}>
+            <motion.div className="redwine__register" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0, opacity: 0 }} onClick={e=>e.stopPropagation()}>
                 <motion.div className="redwine__register-cancel" whileTap={{ scale: .97 }} onClick={() => dispatch(setShowRegister(false))}>
                     <GiCancel size={30} color="#961313" />
                 </motion.div>
