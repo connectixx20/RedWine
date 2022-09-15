@@ -44,44 +44,6 @@ const platformList = [
 
 const Influencer = ({influencer}) => {
     const { winWidth } = useSelector(state => state.util)
-    const influencerData = [
-        {
-            id: 1,
-            img: "https://res.cloudinary.com/redwine/image/upload/v1643695469/Home/photo-1584998316204-3b1e3b1895ae_bke8rq.jpg",
-            name: " Sarah Doe",
-            media: "Instagram"
-        },
-        {
-            id: 2,
-            img: "https://res.cloudinary.com/redwine/image/upload/v1643695445/Home/photo-1603771628357-a2b2d72c2ea0_cputtk.jpg",
-            name: " Sarah Doe",
-            media: "Instagram"
-        },
-        {
-            id: 3,
-            img: "https://res.cloudinary.com/redwine/image/upload/v1643695469/Home/photo-1584998316204-3b1e3b1895ae_bke8rq.jpg",
-            name: " Sarah Doe",
-            media: "Instagram"
-        },
-        {
-            id: 4,
-            img: "https://res.cloudinary.com/redwine/image/upload/v1643695469/Home/photo-1584998316204-3b1e3b1895ae_bke8rq.jpg",
-            name: " Sarah Doe",
-            media: "Instagram"
-        },
-        {
-            id: 5,
-            img: "https://res.cloudinary.com/redwine/image/upload/v1643695445/Home/photo-1603771628357-a2b2d72c2ea0_cputtk.jpg",
-            name: " Sarah Doe",
-            media: "Instagram"
-        },
-        {
-            id: 6,
-            img: "https://res.cloudinary.com/redwine/image/upload/v1643695469/Home/photo-1584998316204-3b1e3b1895ae_bke8rq.jpg",
-            name: " Sarah Doe",
-            media: "Instagram"
-        },
-    ]
 
 
     const breakpoints = {
@@ -104,7 +66,7 @@ const Influencer = ({influencer}) => {
             slidesPerView: 7
         }
     }
-    console.log({ins: influencer})
+    
     return (
         <div className="redwine__home-influencer">
             <div className="title">
@@ -152,7 +114,7 @@ const Influencer = ({influencer}) => {
                         <Swiper slidesPerView={2} modules={[Pagination, Navigation, Autoplay]} breakpoints={{650:{slidesPerView:3}}}>
                             {
                                 platformList.map(item => (
-                                    <SwiperSlide>
+                                    <SwiperSlide key={item.id}>
                                         <div className="redwine__influencer-platform__card" style={{margin:"1rem"}}>
                                             <Image src={item.icon} width={winWidth < 600 ? 40 : 60} height={winWidth < 600 ? 40 : 60} objectFit="contain" loading="eager" />
                                         </div>

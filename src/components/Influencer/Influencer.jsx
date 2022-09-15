@@ -184,7 +184,7 @@ const Influencer = () => {
             <div className="redwine__influencer-platform">
                 {
                     platformList.map(item => (
-                        <div className="redwine__influencer-platform__card">
+                        <div className="redwine__influencer-platform__card" key={item.id}>
                             <Image src={item.icon} width={winWidth < 600 ? 40 : 60} height={winWidth < 600 ? 40 : 60} objectFit="contain" loading="eager" />
                         </div>
                     ))
