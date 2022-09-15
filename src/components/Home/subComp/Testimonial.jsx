@@ -4,10 +4,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import { testimonialData as data } from "../../../../db/data";
+import { urlFor,ImageUrl } from "../../../../lib/client";
 
-const Testimonial = () => {
+const Testimonial = ({testimonial}) => {
     const [width, setwidth] = useState(0);
-    const [selectedData, setSelectedData] = useState(data[0]);
+    const [selectedData, setSelectedData] = useState(testimonial[0]);
 
     useEffect(() => {
         setwidth(window.innerWidth)
@@ -41,6 +42,8 @@ const Testimonial = () => {
         },
 
     }
+
+    console.log({testimonial})
     return (
         <div className='redwine__home-testimonial'>
             <div className="title">
@@ -55,10 +58,10 @@ const Testimonial = () => {
                     <motion.div className="title" initial={{x:-100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:1.4}} viewport={{once:true}}>
                         <h1>{selectedData?.name}</h1>
                         <p style={{color:"#961313",fontWeight:"bold"}}>{selectedData?.company}</p>
-                        <p>{selectedData?.info}</p>
+                        <p>{selectedData?.content}</p>
                     </motion.div>
                     <motion.div className="video" initial={{x:100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:1.4}} viewport={{once:true}}>
-                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${selectedData?.vid}`} title="YouTube video player" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${selectedData?.youtueb_url}`} title="YouTube video player" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </motion.div>
                 </div>
                 <div className="redwine__home-testimonial__content-lower">
@@ -71,10 +74,10 @@ const Testimonial = () => {
                         className="mySwiper"
                         breakpoints={breakpoints}
                     >
-                        {data.map((d) => (
+                        {testimonial.map((d) => (
                             <SwiperSlide key={d.name} onClick={() => setSelectedData(d)} >
-                                <motion.div className={`card ${selectedData.id === d.id && "card-show"}`} >  
-                                    <Image src={d.img} width={300} height={200} objectFit="contain"  />
+                                <motion.div className={`card ${selectedData._id === d._id && "card-show"}`} >  
+                                    <Image {...ImageUrl(d.image)} width={300} height={200} objectFit="cover" />
                                     <div className="card__title">
                                         <h2>{d.name}</h2>
                                         <p >{d.company}</p>

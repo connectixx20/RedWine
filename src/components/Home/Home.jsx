@@ -3,13 +3,14 @@ import Influencer from "./subComp/Influencer"
 import Services from "./subComp/Services"
 import Testimonial from "./subComp/Testimonial"
 
-const Home = () => {
+const Home = ({testimonial,influencer}) => {
+  console.log({home: influencer})
   return (
     <div className="redwine__home">
         <Intro />
-        <Influencer />
+        <Influencer influencer={influencer} />
         <Services />
-        <Testimonial />
+        <Testimonial testimonial={testimonial}  />
     </div>
   )
 }

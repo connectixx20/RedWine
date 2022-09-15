@@ -138,6 +138,7 @@
                 }
             }
 
+
             @media screen and (max-width:900px) {
                 &__item,&.reverse{
                     
@@ -145,6 +146,11 @@
                     margin-top: 2rem;
                     .left{
                         text-align: center !important;
+                    }
+                }
+                &__data{
+                    p{
+                        font-size: 1rem;
                     }
                 }
             }
