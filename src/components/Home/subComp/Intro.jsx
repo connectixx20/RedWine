@@ -10,7 +10,7 @@ const Intro = () => {
     <div className="redwine__home-intro">
         <div className="detail">
             <motion.h1 initial={{y:20,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1}} >RedWine Degital <br />A Influencer Marketing Company</motion.h1>
-            <motion.p initial={{y:40,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae incidunt nam quibusdam. Magnam beatae nobis iste molestiae quia. Cum ea nostrum nemo numquam, esse at perspiciatis ex alias beatae similique?</motion.p>
+            <motion.p initial={{y:40,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1}}>We&apos;re a global influencer marketing agency, powered by influencers. We pride ourselves in bringing together data-led performance, real human relationships, expert creative strategy, authentic engaging content, and laser-sharp paid media targeting.</motion.p>
             <motion.div className="btn" initial={{y:60,opacity:0}} animate={{y:0,opacity:1,transition:{duration:1}}}  whileTap={{scale:0.97}} onClick={()=>dispatch(setShowRegister(true))}>
                 <h2>Register</h2>
             </motion.div>

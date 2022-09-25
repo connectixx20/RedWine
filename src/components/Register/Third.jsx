@@ -9,7 +9,7 @@ const Third = () => {
                 <div className="title">
                     <h3>Brands You&apos;ve Worked With Previously</h3>
                 </div>
-                <input type="text" placeholder='Type NA, if none' {...register("brand", { required: true })} />
+                <input type="text" placeholder='Type NA, if none' {...register("prevbrand", { required: true })} />
                 {
                     errors?.brand?.type==="required" && (
                         <p className="error">Field required</p>

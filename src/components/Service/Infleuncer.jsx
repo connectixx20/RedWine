@@ -104,16 +104,16 @@ const Infleuncer = () => {
                     </Swiper>
                 </div>
                 <div className="content__data">
-                    <p>Redwine Digital is a top influencer marketing company in India that offers the best influencer marketing platform to assist companies and forward-thinking marketers in utilising social media influencers’ content for product marketing (service). For the purpose of conducting outstanding influencer marketing campaigns, our influencer marketing professionals connect clients with the top 50,000+ content creators, social media influencers, artists, and bloggers with interested audiences (possible consumers).</p>
-                    <p>Social media marketing includes influencer marketing. It consists of endorsements and product/service promotions made by influential people, people, and organisations with a reputed level of social influence in their industry.</p>
-                    <p>Influencer marketing is the practise of promoting to, with, and through influencers to reach both your and their target audiences with brand messages.</p>
-                    <p>Though it doesn&quot;t only rely on specific recommendations, influencer marketing is akin to word-of-mouth advertising.</p>
-                    <p>Influencers can originate from a variety of sources. Any person, team, organisation, place, or thing has the capacity to have an influence.</p>
-                    <p>These content makers often have engaged audiences who follow them. Your business can use buyer personas to advertise to them on various social media platforms in order to broaden its reach, raise brand recognition, and produce new leads for your sales funnel.</p>
-                    <p>Influencer marketing can be used as a stand-alone technique or as a way to enhance your other marketing initiatives.</p>
-                    <p>We will delve deeper into the primary advantages of influencer marketing for the business.</p>
-                    <p>Our way to deal with powerhouse determination is framed from the novel exhibition information accumulated in our CRM from over 100k forces to be reckoned with, which illuminates each choice we make.</p>
-                    <p>We join this information with genuine human relationship the board, social first imaginative and system and master following, estimation, improvement and detailing.</p>
+                    <p>Redwine Digital is a top influencer marketing company in India that offers the best influencer marketing platform to assist companies and forward-thinking marketers in utilising social media influencers&quot; content for product marketing (service). For the purpose of conducting outstanding influencer marketing campaigns, our influencer marketing professionals connect clients with the top 50,000+ content creators, social media influencers, artists, and bloggers with interested audiences (possible consumers).
+                    Social media marketing includes influencer marketing. It consists of endorsements and product/service promotions made by influential people, people, and organisations with a reputed level of social influence in their industry.
+                    Influencer marketing is the practise of promoting to, with, and through influencers to reach both your and their target audiences with brand messages. <br /> <br />
+                    Though it doesn&quot;t only rely on specific recommendations, influencer marketing is akin to word-of-mouth advertising.
+                    Influencers can originate from a variety of sources. Any person, team, organisation, place, or thing has the capacity to have an influence.
+                    These content makers often have engaged audiences who follow them. Your business can use buyer personas to advertise to them on various social media platforms in order to broaden its reach, raise brand recognition, and produce new leads for your sales funnel.
+                    Influencer marketing can be used as a stand-alone technique or as a way to enhance your other marketing initiatives.
+                    We will delve deeper into the primary advantages of influencer marketing for the business.
+                    Our way to deal with powerhouse determination is framed from the novel exhibition information accumulated in our CRM from over 100k forces to be reckoned with, which illuminates each choice we make.
+                    We join this information with genuine human relationship the board, social first imaginative and system and master following, estimation, improvement and detailing. </p>
                 </div>
                 <div className="content__ques" style={{marginBottom:"10rem"}}>
                     <div className="content__ques-title">

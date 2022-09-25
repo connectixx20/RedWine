@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import {BsInstagram} from "react-icons/bs"
 import { MdOutlineDeveloperMode } from "react-icons/md"
 import { AiOutlineYoutube } from 'react-icons/ai'
 import Digital from './Digital'
@@ -8,21 +9,21 @@ const Services = () => {
     const services = [
         {
             id: 1,
-            name: "Software Development",
-            info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat inventore earum id. Nihil quisquam quam aliquid maxime aspernatur iste dolorum possimus! Aliquam optio quia quos quasi aut. Eaque, nesciunt enim?",
-            icon: <MdOutlineDeveloperMode color='#961313' size={50} />
+            name: "Influencer Marketing",
+            info: "Quite possibly the earliest mover in the force to be reckoned with promoting space, we have more than seven years of ability in happy creation, relationship building and execution showcasing through powerhouses.",
+            icon: <BsInstagram color='#961313' size={40} />
         },
         {
             id: 2,
             name: "Youtube Marketing",
-            info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat inventore earum id. Nihil quisquam quam aliquid maxime aspernatur iste dolorum possimus! Aliquam optio quia quos quasi aut. Eaque, nesciunt enim?",
+            info: "YouTube showcasing is a cycle to advance your business through recordings on your YouTube channel. It comprises of various strides, from the structure, as well as marking, of your YouTube channel to delivering recordings for it to run a YouTube promotion crusade.",
             icon: <AiOutlineYoutube color='#961313' size={50}  />
         },
         {
             id: 3,
             name: "Digital Media Marketing",
-            info: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat inventore earum id. Nihil quisquam quam aliquid maxime aspernatur iste dolorum possimus! Aliquam optio quia quos quasi aut. Eaque, nesciunt enim?",
-            icon: <Digital />
+            info: "We comprehend your objective market, contest and your item/administration contributions to convey areas of strength for a term system for you. We articulate a definite guide for our clients that adjusts them and their accomplices to the 10,000 foot view.",
+            icon: <Digital  />
         },
     ]
 

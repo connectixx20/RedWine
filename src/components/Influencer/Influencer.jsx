@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css"
 import { useDispatch, useSelector } from "react-redux";
 import { setShowRegister } from "../../../redux/slices/util";
+import { ImageUrl } from "../../../lib/client";
 
 const influencerData = [
     {
@@ -156,11 +157,17 @@ const genreList = [
     },
 ]
 
-const Influencer = () => {
+const Influencer = ({ influencer }) => {
     const dispatch = useDispatch()
     const { winWidth } = useSelector(state => state.util)
-    
 
+
+    const instaInfluencer = influencer?.filter((item) => item.platform === "Instagram")
+    const linkedinInfluencer = influencer?.filter((item) => item.platform === "LinkedIn")
+    const youtubeInfluencer = influencer?.filter((item) => item.platform === "Youtube")
+    const facebookInfluencer = influencer?.filter((item) => item.platform === "Facebook")
+
+    
     return (
         <div className="redwine__influencer">
             <div className="redwine__influencer-intro">
@@ -169,7 +176,7 @@ const Influencer = () => {
                         <h1>A Fully Integrated Influencer <br /> Marketing Agency</h1>
                     </div>
                     <div className="upper__right">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A animi cum illum dolorum! Dolore, a earum omnis maiores esse quo, vitae unde quae modi consequatur in maxime et ea sed?</p>
+                        <p>Taking paid brand representatives on friendly to a strong new degree of viability will get you the return for capital invested from brand advocates never seen !</p>
                         <motion.div className="register" whileTap={{ scale: .97 }} onClick={() => dispatch(setShowRegister(true))}>
                             <h3>Register</h3>
                         </motion.div>
@@ -205,13 +212,12 @@ const Influencer = () => {
                     className="mySwiper"
                     breakpoints={breakpoints}
                 >
-                    {influencerData.map((d, i) => (
+                    {instaInfluencer.map((d, i) => (
                         <SwiperSlide key={d.name}>
                             <div className="content__card">
-                                <Image src={d.img} width={400} height={600} objectFit="contain" />
+                                <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
-                                    <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >Jocelyn Flores</motion.h2>
-                                    <motion.p initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: .3, duration: 1 } }}>Instagram</motion.p>
+                                    <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
                                 </div>
                             </div>
 
@@ -233,13 +239,12 @@ const Influencer = () => {
                     className="mySwiper"
                     breakpoints={breakpoints}
                 >
-                    {influencerData.map((d, i) => (
+                    {linkedinInfluencer.map((d, i) => (
                         <SwiperSlide key={d.name}>
                             <div className="content__card">
-                                <Image src={d.img} width={400} height={600} objectFit="contain" />
+                                <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
-                                    <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >Jocelyn Flores</motion.h2>
-                                    <motion.p initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: .3, duration: 1 } }}>Instagram</motion.p>
+                                    <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
                                 </div>
                             </div>
 
@@ -279,16 +284,14 @@ const Influencer = () => {
                     className="mySwiper"
                     breakpoints={breakpoints}
                 >
-                    {influencerData.map((d, i) => (
+                    {facebookInfluencer.map((d, i) => (
                         <SwiperSlide key={d.name}>
                             <div className="content__card">
-                                <Image src={d.img} width={400} height={600} objectFit="contain" />
+                                <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
-                                    <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >Jocelyn Flores</motion.h2>
-                                    <motion.p initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: .3, duration: 1 } }}>Instagram</motion.p>
+                                    <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
                                 </div>
                             </div>
-
                         </SwiperSlide>
                     ))}
                 </Swiper>
@@ -307,21 +310,19 @@ const Influencer = () => {
                     className="mySwiper"
                     breakpoints={breakpoints}
                 >
-                    {influencerData.map((d, i) => (
+                    {youtubeInfluencer.map((d, i) => (
                         <SwiperSlide key={d.name}>
                             <div className="content__card">
-                                <Image src={d.img} width={400} height={600} objectFit="contain" />
+                                <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
-                                    <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >Jocelyn Flores</motion.h2>
-                                    <motion.p initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: .3, duration: 1 } }}>Instagram</motion.p>
+                                    <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
                                 </div>
                             </div>
-
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
-        </div>
+        </div >
     )
 }
 

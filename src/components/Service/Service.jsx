@@ -7,7 +7,7 @@ import Infleuncer from './Infleuncer'
 import Social from './Social'
 import Youtube from './Youtube'
 
-const Service = () => {
+const Service = ({channel}) => {
     const dispatch = useDispatch()
 
     return (
@@ -26,7 +26,7 @@ const Service = () => {
                 </div>
             </div>
             <div className="astrodivider"><div className="astrodividermask"></div><span><i>&#10038;</i></span></div>
-            <Youtube />
+            <Youtube channel={channel}  />
             <div className="astrodivider"><div className="astrodividermask"></div><span><i>&#10038;</i></span></div>
             <Social />
             <div className="astrodivider"><div className="astrodividermask"></div><span><i>&#10038;</i></span></div>

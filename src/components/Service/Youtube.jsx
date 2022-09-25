@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { ImageUrl } from '../../../lib/client';
 
 SwiperCore.use([Navigation])
 
@@ -152,7 +153,7 @@ const contentItem = [
         content: "“Search Engine Optimization” (SEO) is a term. Most often, creators overlook the fact that YouTube serves as a search engine. Actually, it has 50% more searches than Yahoo, making it the second-largest search engine worldwide. When users seek an answer to an issue, they search YouTube for advice, how-to manuals, and other information. What keywords will help producers rank their YouTube videos at the top isn’t something that can be determined in advance. However, some reverse engineering can facilitate the procedure."
     },
 ]
-const Youtube = () => {
+const Youtube = ({channel}) => {
 
     return (
         <div className="redwine__service-youtube" id='youtube'>
@@ -187,10 +188,10 @@ const Youtube = () => {
                         className="mySwiper"
                     >
                         {
-                            channerlImage.map((item) => (
+                            channel?.map((item) => (
                                 <SwiperSlide key={item.name}>
                                     <div className="desktop__tech">
-                                        <Image src={item.img} alt={item.name} width={300} height={300} objectFit="contain" />
+                                        <Image {...ImageUrl(item?.image)} alt={item.name} width={300} height={300} objectFit="contain" />
                                         <p>{item.name}</p>
                                     </div>
                                 </SwiperSlide>

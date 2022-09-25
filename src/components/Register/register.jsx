@@ -8,7 +8,9 @@ import { GiCancel } from "react-icons/gi"
 import { useDispatch } from "react-redux"
 import { setShowRegister } from "../../../redux/slices/util"
 import { toast, ToastContainer } from "react-toast"
+import axios from "axios"
 
+const APIENDPOINT=process.env.NODE_ENV==="development" ? "http://localhost:4000" : "https://redwineapi1.herokuapp.com"
 
 const Register = () => {
     const totalStep = 3
@@ -21,10 +23,14 @@ const Register = () => {
     useEffect(() => {
 
     }, [dispatch])
-    const onNextHandler = (data) => {
+    const onNextHandler = async(data) => {
         if (formStep === totalStep - 1) {
-            console.log(data)
-            toast.success("Form Submitted, We Will Get in touch with you.")
+            axios.post(`${APIENDPOINT}/influencer`,data).then(()=>{
+                toast.success("Form Submitted, We Will Get in touch with you.")
+            }).catch(()=>{
+                toast.error("Error Occured")
+            })
+            
             setTimeout(()=>{
                 dispatch(setShowRegister(false))
             },2000)
@@ -51,8 +57,6 @@ const Register = () => {
                 return <First />
         }
     }
-
-
 
     return (
         <>

@@ -2,8 +2,9 @@ import Image from 'next/image'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { motion } from 'framer-motion'
+import { ImageUrl } from '../../../lib/client'
 
-const About = () => {
+const About = ({team}) => {
     const { winWidth } = useSelector((state) => state.util)
     const teamItem = [
         {
@@ -55,6 +56,7 @@ const About = () => {
             img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
         },
     ]
+    
     return (
         <div className='redwine__about'>
             <div className="redwine__about-intro">
@@ -62,7 +64,7 @@ const About = () => {
                     <h1>We build bridges <br /> between <span>companies and <br /> customer</span></h1>
                 </div>
                 <div className="right">
-                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore qui blanditiis <br /> et voluptate. Ducimus illo adipisci, debitis quae dolore fuga vel atque, eveniet illum <br /> pariatur quibusdam earum! Quisquam, sint sed.</h2>
+                    <h2>Redwine Digital is a digital marketing agency that offers access to various media platforms as well as performance services. With the aid of a whole range of performance and advertising solutions, we assist marketers in enhancing their brand image, influencing consumers, and generating income.</h2>
                 </div>
             </div>
             <div className="redwine__about-img">
@@ -82,9 +84,9 @@ const About = () => {
                 <div className="semi1" /> 
                 <div className="content">
                     <div className="content__left">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nemo perspiciatis quo assumenda. Eius fugiat praesentium veniam nostrum natus molestias, assumenda perspiciatis? Error, quas tenetur totam enim exercitationem quidem repudiandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dolorem. Distinctio, nemo. Rerum nam, sit dicta tenetur corporis magnam commodi non, obcaecati mollitia aliquam, unde delectus perspiciatis ducimus quo repudiandae?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, sequi esse? Maiores, sit deserunt placeat fuga eum rem doloremque earum eos, optio modi labore ratione necessitatibus quis? Aliquam, hic enim.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nemo perspiciatis quo assumenda. Eius fugiat praesentium veniam nostrum natus molestias, assumenda perspiciatis? Error, quas tenetur totam enim exercitationem quidem repudiandae.</p>
+                        <p>Quite possibly the earliest mover in the force to be reckoned with promoting space, we have more than seven years of ability in happy creation, relationship building and execution showcasing through powerhouses.</p>
+                        <p>Our way to deal with powerhouse determination is framed from the novel exhibition information accumulated in our CRM from over 100k forces to be reckoned with, which illuminates each choice we make.</p>
+                        <p>We join this information with genuine human relationship the board, social first imaginative and system and master following, estimation, improvement and detailing. We’re a global influencer marketing agency, powered by influencers. We pride ourselves in bringing together data-led performance, real human relationships, expert creative strategy, authentic engaging content, and laser-sharp paid media targeting.</p>
                     </div>
                     <div className="content__right">
                         <Image src={"https://images.unsplash.com/photo-1511821057783-3edeee215a67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"} width={500} height={500} objectFit="contain" />
@@ -116,11 +118,12 @@ const About = () => {
                 <div className="divider" />
                 <div className="content">
                     {
-                        teamItem.map((item) => (
-                            <div className="content__card" key={item.id}>
-                                <Image src={item.img} width={300} height={350} objectFit="cover" />
-                                <h2>{item.name}</h2>
-                                <p>{item.pos}</p>
+                        team?.map((item) => (
+                            
+                            <div className="content__card" key={item?._id}>
+                                <Image {...ImageUrl(item.image)} width={300} height={350} objectFit="cover" />
+                                <h2>{item?.name}</h2>
+                                <p>{item?.designation}</p>
                             </div>
                         ))
                     }
