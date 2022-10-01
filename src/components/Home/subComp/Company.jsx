@@ -19,7 +19,7 @@ const Company = ({ companies }) => {
             >
                 {
                     companies?.map(item => (
-                        <SwiperSlide>
+                        <SwiperSlide key={item?.name}>
                             <div className="item" key={item?.name}>
                                 {/* <Image src={"https://res.cloudinary.com/redwine/image/upload/v1662973727/5359861_oa4rhq.png"} width={150} height={100} /> */}
                                 <Image {...ImageUrl(item?.image)} width={150} height={100} objectFit="contain" />
