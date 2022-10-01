@@ -195,6 +195,22 @@
     }
   }
 
+  &-company{
+    margin: 4rem 0;
+    .item{
+      @include center_element;
+
+      img{
+        // filter: grayscale(100%);
+        
+      }
+      &:hover .img{
+        
+        filter: grayscale(100%);
+      }
+    }
+  }
+
   &-testimonial {
     // padding: 7rem 5rem;
     margin-top: 5rem;

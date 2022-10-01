@@ -2,12 +2,12 @@ import React from "react";
 import { client } from "../lib/client";
 import { Layout,Home } from "../src";
 
-const Index = ({testimonial,influencer}) => {
+const Index = ({testimonial,influencer,companies}) => {
   
   
   return (
     <Layout title={"Home"} description={"Redwine Home"}>
-      <Home testimonial={testimonial} influencer={influencer} />
+      <Home testimonial={testimonial} influencer={influencer} companies={companies} />
     </Layout>
   );
 };
@@ -17,9 +17,11 @@ export async function getServerSideProps(){
   const testimonial= await client.fetch(query)
   const query2=`*[_type == "influencer"]`
   const influencer= await client.fetch(query2)
+  const query3=`*[_type== "company"]`
+  const companies=await client.fetch(query3)
 
   return {
-    props:{testimonial,influencer}
+    props:{testimonial,influencer,companies}
   }
 }
 
