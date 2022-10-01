@@ -170,6 +170,7 @@
       justify-content: space-around;
 
       &__card {
+        cursor: pointer;
         width: 29rem;
         @include card_shadow;
         padding: 2rem;

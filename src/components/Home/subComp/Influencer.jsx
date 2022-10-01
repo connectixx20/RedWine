@@ -89,7 +89,7 @@ const Influencer = ({influencer}) => {
                     {influencer?.map((d, i) => (
                         <SwiperSlide key={d.name}>
                             <div className="content__card">
-                                <Image {...ImageUrl(d.image)} width={400} height={600} objectFit="contain" />
+                                <Image {...ImageUrl(d.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d.name}</motion.h2>
                                     <motion.p initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: .3, duration: 1 } }}>{d.platform}</motion.p>

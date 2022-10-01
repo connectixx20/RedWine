@@ -36,10 +36,10 @@ const Footer = () => {
         <div className="redwine__footer">
             <div className="upper">
                 <div className="detail">
-                    <Image src={"/logo.png"} width={150} height={90} objectFit="contain" />
+                    <Image src={"/logo1.png"} width={150} height={90} objectFit="contain" />
                     <div className="detail__address">
-                        <p>102, 372, Jyoti Chamber, Narshi Matha Street, <br /> Opp Mandvi Bank, Masjid Bunder (east)</p>
-                        <p>+91 9948938438</p>
+                        <p>CRYSTAL PLAZA, 207-C, New Link Rd, Phase D, Shastri Nagar, <br /> Andheri West, Andheri, Maharashtra 400053</p>
+                        <p>+91 9920596108</p>
                         <p>info@redwine.digital</p>
                     </div>
                 </div>
@@ -86,14 +86,14 @@ const Footer = () => {
                     <p>
                         All rights reserved
                         &#169;
-                        2022 Redwine Digital
+                        2018 Redwine Digital
                     </p>
                 </div>
                 <div className="link">
-                    <Link href={"/privacy"}>
+                    <Link href={"#privacy"}>
                         <motion.a whileTap={{y:-5}}>Privacy Policy</motion.a>
                     </Link>
-                    <Link href={"/terms"}>
+                    <Link href={"#terms"}>
                         <motion.a whileTap={{y:-5}}>Terms & Condition</motion.a>
                     </Link>
                 </div>

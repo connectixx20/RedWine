@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { motion } from 'framer-motion'
 import { ImageUrl } from '../../../lib/client'
 
-const About = ({team}) => {
+const About = ({ team }) => {
     const { winWidth } = useSelector((state) => state.util)
     const teamItem = [
         {
@@ -56,7 +56,7 @@ const About = ({team}) => {
             img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
         },
     ]
-    
+
     return (
         <div className='redwine__about'>
             <div className="redwine__about-intro">
@@ -76,39 +76,44 @@ const About = ({team}) => {
             <div className="redwine__about-influencer">
                 <div className="title">
                     <div className="title__inner">
-                        <h1>Influencer Marketing</h1>
+                        <h1>Why Choose Us</h1>
                         <motion.div className="line" initial={{ width: 0 }} whileInView={{ width: "100%" }} transition={{ duration: 1 }} viewport={{ once: true }} />
                     </div>
                     <div className="showcase"></div>
                 </div>
-                <div className="semi1" /> 
+                <div className="semi1" />
                 <div className="content">
                     <div className="content__left">
-                        <p>Quite possibly the earliest mover in the force to be reckoned with promoting space, we have more than seven years of ability in happy creation, relationship building and execution showcasing through powerhouses.</p>
-                        <p>Our way to deal with powerhouse determination is framed from the novel exhibition information accumulated in our CRM from over 100k forces to be reckoned with, which illuminates each choice we make.</p>
-                        <p>We join this information with genuine human relationship the board, social first imaginative and system and master following, estimation, improvement and detailing. We’re a global influencer marketing agency, powered by influencers. We pride ourselves in bringing together data-led performance, real human relationships, expert creative strategy, authentic engaging content, and laser-sharp paid media targeting.</p>
+                        <h2>Experience across multiple industries</h2>
+                        <p>As a social media marketing company, we have worked with numerous clients from a variety of industries and have seen success.</p>
+                        <h2>Ridiculous Association</h2>
+                        <p>Unless you insist on contracts or a more prolonged relationship, we can work with you on a monthly basis.</p>
+                        <h2>Transparency</h2>
+                        <p>With our clients, we are completely open and honest. We never provide reports with erroneous statistics; they are always correct numbers.</p>
+                        <h2>We value service.</h2>
+                        <p>Healthy working relationships depend on service, thus we follow the rule of listening to our clients, making ourselves available to them, and striving to provide them with the finest service possible</p>
                     </div>
                     <div className="content__right">
-                        <Image src={"https://images.unsplash.com/photo-1511821057783-3edeee215a67?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"} width={500} height={500} objectFit="contain" />
+                        <Image src={"https://res.cloudinary.com/redwine/image/upload/v1664610983/Redwine/Man_thinking-pana_lxz56k.png"} width={500} height={500} objectFit="contain" />
                     </div>
                 </div>
-                <div className="semi2" /> 
+                <div className="semi2" />
             </div>
             <div className="outer">
                 <div className="divider" />
             </div>
             <div className="redwine__about-stats">
                 <div className="item">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur tempore vel nemo dolores itaque laboriosam.</p>
+                    <h3>Projects We have completed so far in this journey</h3>
                     <h1>290+</h1>
                 </div>
                 <div className="item">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur tempore vel nemo dolores itaque laboriosam.</p>
+                    <h3>Its Been Almost 5+ years in this domain.</h3>
                     <h1>12+</h1>
                 </div>
                 <div className="item">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad tenetur tempore vel nemo dolores itaque laboriosam.</p>
-                    <h1>29k+</h1>
+                    <h3>Our Influencer Community We gathered till now</h3>
+                    <h1>5k+</h1>
                 </div>
             </div>
             <div className="redwine__about-team">
@@ -119,7 +124,7 @@ const About = ({team}) => {
                 <div className="content">
                     {
                         team?.map((item) => (
-                            
+
                             <div className="content__card" key={item?._id}>
                                 <Image {...ImageUrl(item.image)} width={300} height={350} objectFit="cover" />
                                 <h2>{item?.name}</h2>

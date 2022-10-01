@@ -88,7 +88,10 @@ const Infleuncer = () => {
     return (
         <div className='redwine__service-influencer' id='influencer'>
             <div className="title">
+                <div className="title__text">
+                <Image src={"https://res.cloudinary.com/redwine/image/upload/v1664612374/Redwine/influencer_pl3vdj.png"} width={50} height={50} />
                 <h1>Influencer Marketing</h1>
+                </div>
                 <p>We will delve deeper into the primary advantages of influencer marketing for the business.</p>
             </div>
             <div className="content">

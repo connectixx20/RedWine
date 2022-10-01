@@ -24,7 +24,7 @@ const swiperConfig = {
     navigation: true,
     style: { height: 300, paddingTop: 30 },
     breakpoints: {
-        600:{
+        600: {
             slidesPerView: 2,
             slidesPerGroup: 2
         },
@@ -153,12 +153,15 @@ const contentItem = [
         content: "“Search Engine Optimization” (SEO) is a term. Most often, creators overlook the fact that YouTube serves as a search engine. Actually, it has 50% more searches than Yahoo, making it the second-largest search engine worldwide. When users seek an answer to an issue, they search YouTube for advice, how-to manuals, and other information. What keywords will help producers rank their YouTube videos at the top isn’t something that can be determined in advance. However, some reverse engineering can facilitate the procedure."
     },
 ]
-const Youtube = ({channel}) => {
+const Youtube = ({ channel }) => {
 
     return (
         <div className="redwine__service-youtube" id='youtube'>
             <div className="title">
-                <h1>Youtube Marketing</h1>
+                <div className="title__text">
+                    <Image src={"https://res.cloudinary.com/redwine/image/upload/v1664612374/Redwine/youtube_wzv6s6.png"} width={50} height={50} />
+                    <h1>  Youtube Marketing</h1>
+                </div>
                 <p>With our exceptionally innovative and vital methodology we separate your YouTube rivals.</p>
             </div>
             <div className="content">

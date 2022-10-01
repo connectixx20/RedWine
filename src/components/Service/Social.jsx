@@ -1,6 +1,6 @@
 import Image from "next/image"
-import {BsQuestionCircle} from "react-icons/bs"
-import {BiCheckCircle} from "react-icons/bi"
+import { BsQuestionCircle } from "react-icons/bs"
+import { BiCheckCircle } from "react-icons/bi"
 
 
 const contentItem = [
@@ -83,53 +83,53 @@ const contentItem = [
         content: "We comprehend your objective market, contest and your item/administration contributions to convey areas of strength for a term system for you. We articulate a definite guide for our clients that adjusts them and their accomplices to the 10,000 foot view."
     },
 ]
-const quesItem=[
+const quesItem = [
     {
-        id:0,
-        content:"Are higher rankings of any value if people don’t recognize your brand?"
+        id: 0,
+        content: "Are higher rankings of any value if people don’t recognize your brand?"
     },
     {
-        id:1,
-        content:"Do people mention yours as a great brand when compared to your major competitors?"
+        id: 1,
+        content: "Do people mention yours as a great brand when compared to your major competitors?"
     },
     {
-        id:2,
-        content:"Are you promoting keywords in the domain name or promoting the brand story (as powerful brands such as Nike and Starbucks do so well)?"
+        id: 2,
+        content: "Are you promoting keywords in the domain name or promoting the brand story (as powerful brands such as Nike and Starbucks do so well)?"
     },
     {
-        id:3,
-        content:"Are people searching for the brand name on Google?"
+        id: 3,
+        content: "Are people searching for the brand name on Google?"
     },
 ]
 
-const tipsItem=[
+const tipsItem = [
     {
-        id:0,
-        name:"Research your target audience and your competitors."
+        id: 0,
+        name: "Research your target audience and your competitors."
     },
     {
-        id:1,
-        name:"Pick your focus and personality."
+        id: 1,
+        name: "Pick your focus and personality."
     },
     {
-        id:2,
-        name:"Choose your business name."
+        id: 2,
+        name: "Choose your business name."
     },
     {
-        id:3,
-        name:"Write your slogan."
+        id: 3,
+        name: "Write your slogan."
     },
     {
-        id:4,
-        name:"Choose the look of your brand (colors and font)."
+        id: 4,
+        name: "Choose the look of your brand (colors and font)."
     },
     {
-        id:5,
-        name:"Design your logo."
+        id: 5,
+        name: "Design your logo."
     },
     {
-        id:6,
-        name:"Apply your branding across your business and evolve it as you grow."
+        id: 6,
+        name: "Apply your branding across your business and evolve it as you grow."
     },
 ]
 
@@ -137,12 +137,15 @@ const Social = () => {
     return (
         <div className="redwine__service-digital" id='social'>
             <div className="title">
-                <h1>Digital Marketing</h1>
+                <div className="title__text">
+                    <Image src={"https://res.cloudinary.com/redwine/image/upload/v1664612374/Redwine/digital-marketing_utqxhz.png"} width={50} height={50} />
+                    <h1>Digital Marketing</h1>
+                </div>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque totam natus laudantium iusto quidem dicta magni eaque illo eius vel</p>
             </div>
             <div className="content">
                 {
-                    contentItem.slice(0,4).map((item) => (
+                    contentItem.slice(0, 4).map((item) => (
                         <div className={`content__item ${(item.id + 1) % 2 === 0 ? "reverse" : ""}`} key={item.id}>
                             <div className="left">
                                 <Image src={item.img} width={500} height={500} objectFit="contain" />
@@ -151,8 +154,8 @@ const Social = () => {
                                 <div className="right__title">
                                     <h2>{item.name}</h2>
                                 </div>
-                                <div className="right__content" dangerouslySetInnerHTML={{ __html: item.content }}> 
-                                    
+                                <div className="right__content" dangerouslySetInnerHTML={{ __html: item.content }}>
+
                                 </div>
                             </div>
                         </div>
@@ -164,7 +167,7 @@ const Social = () => {
                     </div>
                     <div className="content__ques-grid">
                         {
-                            quesItem.map((item)=>(
+                            quesItem.map((item) => (
                                 <div className="item" key={item.id}>
                                     <BsQuestionCircle color="#961313" size={20} />
                                     <h3>{item.content}</h3>
@@ -172,12 +175,12 @@ const Social = () => {
                             ))
                         }
                     </div>
-                    <div className="content__ques-title" style={{marginTop:"4rem"}}>
+                    <div className="content__ques-title" style={{ marginTop: "4rem" }}>
                         <h2>How to Build a Brand:</h2>
                     </div>
                     <div className="content__ques-grid">
                         {
-                            tipsItem.map((item)=>(
+                            tipsItem.map((item) => (
                                 <div className="item" key={item.id}>
                                     <BiCheckCircle color="green" size={20} />
                                     <h3>{item.name}</h3>
@@ -189,22 +192,22 @@ const Social = () => {
             </div>
 
             {
-                    contentItem.slice(4).map((item) => (
-                        <div className={`content__item ${(item.id + 1) % 2 !== 0 ? "reverse" : ""}`} key={item.id}>
-                            <div className="left">
-                                <Image src={item.img} width={500} height={500} objectFit="contain" />
+                contentItem.slice(4).map((item) => (
+                    <div className={`content__item ${(item.id + 1) % 2 !== 0 ? "reverse" : ""}`} key={item.id}>
+                        <div className="left">
+                            <Image src={item.img} width={500} height={500} objectFit="contain" />
+                        </div>
+                        <div className="right">
+                            <div className="right__title">
+                                <h2>{item.name}</h2>
                             </div>
-                            <div className="right">
-                                <div className="right__title">
-                                    <h2>{item.name}</h2>
-                                </div>
-                                <div className="right__content" dangerouslySetInnerHTML={{ __html: item.content }}> 
-                                    
-                                </div>
+                            <div className="right__content" dangerouslySetInnerHTML={{ __html: item.content }}>
+
                             </div>
                         </div>
-                    ))
-                }
+                    </div>
+                ))
+            }
         </div>
     )
 }

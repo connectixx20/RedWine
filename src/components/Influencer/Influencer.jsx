@@ -9,45 +9,8 @@ import "swiper/css"
 import { useDispatch, useSelector } from "react-redux";
 import { setShowRegister } from "../../../redux/slices/util";
 import { ImageUrl } from "../../../lib/client";
+import millify from "millify";
 
-const influencerData = [
-    {
-        id: 1,
-        img: "https://res.cloudinary.com/redwine/image/upload/v1643695469/Home/photo-1584998316204-3b1e3b1895ae_bke8rq.jpg",
-        name: " Sarah Doe",
-        media: "Instagram"
-    },
-    {
-        id: 2,
-        img: "https://res.cloudinary.com/redwine/image/upload/v1643695445/Home/photo-1603771628357-a2b2d72c2ea0_cputtk.jpg",
-        name: " Sarah Doe",
-        media: "Instagram"
-    },
-    {
-        id: 3,
-        img: "https://res.cloudinary.com/redwine/image/upload/v1643695469/Home/photo-1584998316204-3b1e3b1895ae_bke8rq.jpg",
-        name: " Sarah Doe",
-        media: "Instagram"
-    },
-    {
-        id: 4,
-        img: "https://res.cloudinary.com/redwine/image/upload/v1643695469/Home/photo-1584998316204-3b1e3b1895ae_bke8rq.jpg",
-        name: " Sarah Doe",
-        media: "Instagram"
-    },
-    {
-        id: 5,
-        img: "https://res.cloudinary.com/redwine/image/upload/v1643695445/Home/photo-1603771628357-a2b2d72c2ea0_cputtk.jpg",
-        name: " Sarah Doe",
-        media: "Instagram"
-    },
-    {
-        id: 6,
-        img: "https://res.cloudinary.com/redwine/image/upload/v1643695469/Home/photo-1584998316204-3b1e3b1895ae_bke8rq.jpg",
-        name: " Sarah Doe",
-        media: "Instagram"
-    },
-]
 
 const breakpoints = {
     450: {
@@ -176,7 +139,7 @@ const Influencer = ({ influencer }) => {
                         <h1>A Fully Integrated Influencer <br /> Marketing Agency</h1>
                     </div>
                     <div className="upper__right">
-                        <p>Taking paid brand representatives on friendly to a strong new degree of viability will get you the return for capital invested from brand advocates never seen !</p>
+                        <p>With the help of social media influencers and businesses, Redwine Digital, a well-known influencer marketing platform in India, can craft captivating stories for the promotion of certain products. Our experts connect companies with top content creators, social media influencers, artists, and bloggers to reach and engage millions of customers through remarkable influencer content and marketing campaigns.</p>
                         <motion.div className="register" whileTap={{ scale: .97 }} onClick={() => dispatch(setShowRegister(true))}>
                             <h3>Register</h3>
                         </motion.div>
@@ -218,6 +181,7 @@ const Influencer = ({ influencer }) => {
                                 <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
+                                    <motion.p  initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
                                 </div>
                             </div>
 
@@ -245,6 +209,7 @@ const Influencer = ({ influencer }) => {
                                 <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
+                                    <motion.p  initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
                                 </div>
                             </div>
 
@@ -290,6 +255,7 @@ const Influencer = ({ influencer }) => {
                                 <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
+                            <motion.p  initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -316,6 +282,7 @@ const Influencer = ({ influencer }) => {
                                 <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
+                            <motion.p  initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
                                 </div>
                             </div>
                         </SwiperSlide>

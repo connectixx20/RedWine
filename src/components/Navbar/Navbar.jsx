@@ -84,7 +84,12 @@ const Navbar = () => {
                     id: 2,
                     name: "Influencer Marketing",
                     link: "influencer"
-                }
+                },
+                {
+                    id: 3,
+                    name: "Software Development",
+                    link: "software"
+                },
             ]
         },
     ]

@@ -219,18 +219,18 @@ body::-webkit-scrollbar-thumb {
 .redwine__footer {
   margin-top: 5rem;
   padding: 5rem 5rem 1rem;
-  background: rgb(212, 212, 212);
+  background: black;
 }
 .redwine__footer h2 {
   font-family: "Noto Sans", sans-serif;
   color: #961313;
 }
 .redwine__footer p {
-  color: rgb(71, 71, 71);
+  color: white;
   font-family: "Noto Sans", sans-serif;
 }
 .redwine__footer a {
-  color: rgb(71, 71, 71);
+  color: white;
   cursor: pointer;
   font-family: "Noto Sans", sans-serif;
 }
@@ -716,6 +716,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-around;
 }
 .redwine__home-services .content__card {
+  cursor: pointer;
   width: 29rem;
   box-shadow: 0 0.125rem 0.5rem -0.25rem rgba(31, 27, 45, 0.12), 0 0.25rem 1rem rgba(31, 27, 45, 0.12) !important;
   padding: 2rem;
@@ -1211,33 +1212,46 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   padding: 0.7rem 1rem;
 }
+.redwine__service-intro .left__list {
+  padding: 1rem;
+}
+.redwine__service-intro .left__list h2 {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
 .redwine__service .title {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+.redwine__service .title__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .redwine__service .title h1 {
+  margin-left: 0.8rem;
   color: #961313;
   font-size: 2.2rem;
 }
 .redwine__service .title p {
   font-size: 1.1rem;
 }
-.redwine__service-youtube .content, .redwine__service-digital .content, .redwine__service-influencer .content {
+.redwine__service-youtube .content, .redwine__service-digital .content, .redwine__service-influencer .content, .redwine__service-software .content {
   margin-top: 3rem;
 }
-.redwine__service-youtube .content__item, .redwine__service-digital .content__item, .redwine__service-influencer .content__item {
+.redwine__service-youtube .content__item, .redwine__service-digital .content__item, .redwine__service-influencer .content__item, .redwine__service-software .content__item {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   margin-top: 2rem;
 }
-.redwine__service-youtube .content__item .left, .redwine__service-digital .content__item .left, .redwine__service-influencer .content__item .left {
+.redwine__service-youtube .content__item .left, .redwine__service-digital .content__item .left, .redwine__service-influencer .content__item .left, .redwine__service-software .content__item .left {
   width: 100%;
 }
-.redwine__service-youtube .content__item .right, .redwine__service-digital .content__item .right, .redwine__service-influencer .content__item .right {
+.redwine__service-youtube .content__item .right, .redwine__service-digital .content__item .right, .redwine__service-influencer .content__item .right, .redwine__service-software .content__item .right {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -1246,78 +1260,78 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-around;
   align-items: flex-start;
 }
-.redwine__service-youtube .content__item .right h2, .redwine__service-digital .content__item .right h2, .redwine__service-influencer .content__item .right h2 {
+.redwine__service-youtube .content__item .right h2, .redwine__service-digital .content__item .right h2, .redwine__service-influencer .content__item .right h2, .redwine__service-software .content__item .right h2 {
   color: #961313;
 }
-.redwine__service-youtube .content__item .right__content, .redwine__service-digital .content__item .right__content, .redwine__service-influencer .content__item .right__content {
+.redwine__service-youtube .content__item .right__content, .redwine__service-digital .content__item .right__content, .redwine__service-influencer .content__item .right__content, .redwine__service-software .content__item .right__content {
   margin-top: 2rem;
 }
-.redwine__service-youtube .content__item .right__content p, .redwine__service-digital .content__item .right__content p, .redwine__service-influencer .content__item .right__content p {
+.redwine__service-youtube .content__item .right__content p, .redwine__service-digital .content__item .right__content p, .redwine__service-influencer .content__item .right__content p, .redwine__service-software .content__item .right__content p {
   color: gray;
 }
-.redwine__service-youtube .content__item.reverse, .redwine__service-digital .content__item.reverse, .redwine__service-influencer .content__item.reverse {
+.redwine__service-youtube .content__item.reverse, .redwine__service-digital .content__item.reverse, .redwine__service-influencer .content__item.reverse, .redwine__service-software .content__item.reverse {
   flex-direction: row-reverse;
 }
-.redwine__service-youtube .content__item.reverse .left, .redwine__service-digital .content__item.reverse .left, .redwine__service-influencer .content__item.reverse .left {
+.redwine__service-youtube .content__item.reverse .left, .redwine__service-digital .content__item.reverse .left, .redwine__service-influencer .content__item.reverse .left, .redwine__service-software .content__item.reverse .left {
   text-align: end;
 }
-.redwine__service-youtube .content__ques, .redwine__service-digital .content__ques, .redwine__service-influencer .content__ques {
+.redwine__service-youtube .content__ques, .redwine__service-digital .content__ques, .redwine__service-influencer .content__ques, .redwine__service-software .content__ques {
   margin-top: 5rem;
 }
-.redwine__service-youtube .content__ques-title, .redwine__service-digital .content__ques-title, .redwine__service-influencer .content__ques-title {
+.redwine__service-youtube .content__ques-title, .redwine__service-digital .content__ques-title, .redwine__service-influencer .content__ques-title, .redwine__service-software .content__ques-title {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
 }
-.redwine__service-youtube .content__ques h2, .redwine__service-digital .content__ques h2, .redwine__service-influencer .content__ques h2 {
+.redwine__service-youtube .content__ques h2, .redwine__service-digital .content__ques h2, .redwine__service-influencer .content__ques h2, .redwine__service-software .content__ques h2 {
   color: #961313;
 }
-.redwine__service-youtube .content__ques-grid, .redwine__service-digital .content__ques-grid, .redwine__service-influencer .content__ques-grid {
+.redwine__service-youtube .content__ques-grid, .redwine__service-digital .content__ques-grid, .redwine__service-influencer .content__ques-grid, .redwine__service-software .content__ques-grid {
   margin-top: 3rem;
 }
-.redwine__service-youtube .content__ques-grid .item, .redwine__service-digital .content__ques-grid .item, .redwine__service-influencer .content__ques-grid .item {
+.redwine__service-youtube .content__ques-grid .item, .redwine__service-digital .content__ques-grid .item, .redwine__service-influencer .content__ques-grid .item, .redwine__service-software .content__ques-grid .item {
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
 }
-.redwine__service-youtube .content__ques-grid .item h3, .redwine__service-digital .content__ques-grid .item h3, .redwine__service-influencer .content__ques-grid .item h3 {
+.redwine__service-youtube .content__ques-grid .item h3, .redwine__service-digital .content__ques-grid .item h3, .redwine__service-influencer .content__ques-grid .item h3, .redwine__service-software .content__ques-grid .item h3 {
   margin-left: 1rem;
   width: 100%;
 }
-.redwine__service-youtube .content__ques-grid .item:not(:last-child), .redwine__service-digital .content__ques-grid .item:not(:last-child), .redwine__service-influencer .content__ques-grid .item:not(:last-child) {
+.redwine__service-youtube .content__ques-grid .item:not(:last-child), .redwine__service-digital .content__ques-grid .item:not(:last-child), .redwine__service-influencer .content__ques-grid .item:not(:last-child), .redwine__service-software .content__ques-grid .item:not(:last-child) {
   margin-bottom: 2rem;
 }
-.redwine__service-youtube .content__slider, .redwine__service-digital .content__slider, .redwine__service-influencer .content__slider {
+.redwine__service-youtube .content__slider, .redwine__service-digital .content__slider, .redwine__service-influencer .content__slider, .redwine__service-software .content__slider {
   margin-top: 7rem;
 }
-.redwine__service-youtube .content__slider .swiper, .redwine__service-digital .content__slider .swiper, .redwine__service-influencer .content__slider .swiper {
+.redwine__service-youtube .content__slider .swiper, .redwine__service-digital .content__slider .swiper, .redwine__service-influencer .content__slider .swiper, .redwine__service-software .content__slider .swiper {
   height: 100% !important;
 }
-.redwine__service-youtube .content__slider .title, .redwine__service-digital .content__slider .title, .redwine__service-influencer .content__slider .title {
+.redwine__service-youtube .content__slider .title, .redwine__service-digital .content__slider .title, .redwine__service-influencer .content__slider .title, .redwine__service-software .content__slider .title {
   margin-bottom: 3rem;
 }
-.redwine__service-youtube .content__slider img, .redwine__service-digital .content__slider img, .redwine__service-influencer .content__slider img {
+.redwine__service-youtube .content__slider img, .redwine__service-digital .content__slider img, .redwine__service-influencer .content__slider img, .redwine__service-software .content__slider img {
   border-radius: 4px;
 }
-.redwine__service-youtube .content__slider .swiper-button-prev, .redwine__service-youtube .content__slider .swiper-button-next, .redwine__service-digital .content__slider .swiper-button-prev, .redwine__service-digital .content__slider .swiper-button-next, .redwine__service-influencer .content__slider .swiper-button-prev, .redwine__service-influencer .content__slider .swiper-button-next {
+.redwine__service-youtube .content__slider .swiper-button-prev, .redwine__service-youtube .content__slider .swiper-button-next, .redwine__service-digital .content__slider .swiper-button-prev, .redwine__service-digital .content__slider .swiper-button-next, .redwine__service-influencer .content__slider .swiper-button-prev, .redwine__service-influencer .content__slider .swiper-button-next, .redwine__service-software .content__slider .swiper-button-prev, .redwine__service-software .content__slider .swiper-button-next {
   color: #961313;
 }
-.redwine__service-youtube .content__slider p, .redwine__service-digital .content__slider p, .redwine__service-influencer .content__slider p {
+.redwine__service-youtube .content__slider p, .redwine__service-digital .content__slider p, .redwine__service-influencer .content__slider p, .redwine__service-software .content__slider p {
   text-align: center;
   font-weight: 700;
   color: #961313;
 }
 @media screen and (max-width: 900px) {
-  .redwine__service-youtube .content__item, .redwine__service-youtube .content.reverse, .redwine__service-digital .content__item, .redwine__service-digital .content.reverse, .redwine__service-influencer .content__item, .redwine__service-influencer .content.reverse {
+  .redwine__service-youtube .content__item, .redwine__service-youtube .content.reverse, .redwine__service-digital .content__item, .redwine__service-digital .content.reverse, .redwine__service-influencer .content__item, .redwine__service-influencer .content.reverse, .redwine__service-software .content__item, .redwine__service-software .content.reverse {
     flex-direction: column !important;
     margin-top: 2rem;
   }
-  .redwine__service-youtube .content__item .left, .redwine__service-youtube .content.reverse .left, .redwine__service-digital .content__item .left, .redwine__service-digital .content.reverse .left, .redwine__service-influencer .content__item .left, .redwine__service-influencer .content.reverse .left {
+  .redwine__service-youtube .content__item .left, .redwine__service-youtube .content.reverse .left, .redwine__service-digital .content__item .left, .redwine__service-digital .content.reverse .left, .redwine__service-influencer .content__item .left, .redwine__service-influencer .content.reverse .left, .redwine__service-software .content__item .left, .redwine__service-software .content.reverse .left {
     text-align: center !important;
   }
-  .redwine__service-youtube .content__data p, .redwine__service-digital .content__data p, .redwine__service-influencer .content__data p {
+  .redwine__service-youtube .content__data p, .redwine__service-digital .content__data p, .redwine__service-influencer .content__data p, .redwine__service-software .content__data p {
     font-size: 1rem;
   }
 }
@@ -1326,8 +1340,7 @@ body::-webkit-scrollbar-thumb {
 }
 .redwine__service-influencer .content__data p {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.1rem;
 }
 .redwine__service-influencer .content__ques-grid {
   display: grid;
@@ -1341,6 +1354,22 @@ body::-webkit-scrollbar-thumb {
   .redwine__service-influencer .content__ques-grid {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.redwine__service-software .right__content h4 {
+  margin-bottom: 0.6rem !important;
+}
+.redwine__service-software .content__item1 {
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.redwine__service-software .content__item1 h2 {
+  margin-bottom: 1rem;
+}
+.redwine__service-software .content__item1 h4 {
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 1350px) {
   .redwine__service {
@@ -1365,6 +1394,9 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 500px) {
   .redwine__service {
     padding: 0 1rem 3rem;
+  }
+  .redwine__service-intro .left {
+    font-size: 0.85rem;
   }
   .redwine__service-intro .left .register {
     width: 100%;
