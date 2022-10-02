@@ -38,9 +38,9 @@ const Footer = () => {
                 <div className="detail">
                     <Image src={"/logo1.png"} width={150} height={90} objectFit="contain" />
                     <div className="detail__address">
-                        <p>CRYSTAL PLAZA, 207-C, New Link Rd, Phase D, Shastri Nagar, <br /> Andheri West, Andheri, Maharashtra 400053</p>
-                        <p>+91 9920596108</p>
-                        <p>info@redwine.digital</p>
+                        <p>CRYSTAL PLAZA, New Link Rd, Phase D, Shastri Nagar,<br /> Andheri West, Andheri, Maharashtra 400053 </p>
+                        <p>info@redwine.digital <br />Redwinedigital16@gmail.com  </p>
+                        <p>+91 82689 49507 </p>
                     </div>
                 </div>
                 <div className="quick">
@@ -61,7 +61,7 @@ const Footer = () => {
                     </div>
                     <div className="influencer__content content">
                         {influencerLinks.map((item) => (
-                            <Link className="item" href={`/influencer/${item.url}`} key={item.name}>
+                            <Link className="item" href={`/influencer#${item.url}`} key={item.name}>
                                 <motion.a whileTap={{x:5}}>{item.name}</motion.a>
                             </Link>
                         ))}
@@ -73,7 +73,7 @@ const Footer = () => {
                     </div>
                     <div className="services__content content">
                         {serviceLinks.map((item) => (
-                            <Link className="item" href={`/services/${item.url}`} key={item.name}>
+                            <Link className="item" href={`/services#{item.url}`} key={item.name}>
                                 <motion.a whileTap={{x:5}}>{item.name}</motion.a>
                             </Link>
                         ))}
@@ -90,11 +90,11 @@ const Footer = () => {
                     </p>
                 </div>
                 <div className="link">
-                    <Link href={"#privacy"}>
+                    <Link href={"/privacy"}>
                         <motion.a whileTap={{y:-5}}>Privacy Policy</motion.a>
                     </Link>
-                    <Link href={"#terms"}>
-                        <motion.a whileTap={{y:-5}}>Terms & Condition</motion.a>
+                    <Link href={"/privacy"}>
+                        <motion.a whileTap={{y:-5}}>Legals</motion.a>
                     </Link>
                 </div>
                 <div className="social">

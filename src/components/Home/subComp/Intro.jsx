@@ -9,7 +9,7 @@ const Intro = () => {
   return (
     <div className="redwine__home-intro">
         <div className="detail">
-            <motion.h1 initial={{y:20,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1}} >RedWine Digital <br />Digital marketing and advertising agency </motion.h1>
+            <motion.h1 initial={{y:20,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1}} >RedWine Digital <br />Digital Marketing And Advertising Agency </motion.h1>
             <motion.p initial={{y:40,opacity:0}} animate={{y:0,opacity:1}} transition={{duration:1}}>We&apos;re a digital marketing agency & influencer agency. We pride ourselves in bringing together data-led performance, real human relationships, expert creative strategy, authentic engaging content, and laser-sharp paid media targeting.</motion.p>
             <motion.div className="btn" initial={{y:60,opacity:0}} animate={{y:0,opacity:1,transition:{duration:1}}}  whileTap={{scale:0.97}} onClick={()=>dispatch(setShowRegister(true))}>
                 <h2>Register</h2>

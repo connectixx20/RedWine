@@ -5,7 +5,6 @@ import Testimonial from "./subComp/Testimonial"
 import Company from "./subComp/Company"
 
 const Home = ({testimonial,influencer,companies}) => {
-  console.log({home: influencer})
   return (
     <div className="redwine__home">
         <Intro />

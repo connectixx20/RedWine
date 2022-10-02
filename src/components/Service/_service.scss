@@ -249,6 +249,12 @@
 
     @media screen and (max-width:500px) {
         padding: 0 1rem 3rem;
+        .title{
+            h1{
+                font-size: 1.7rem;
+                text-align: center;
+            }
+        }
         &-intro{
             .left{
 

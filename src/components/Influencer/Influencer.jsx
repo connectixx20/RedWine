@@ -235,7 +235,7 @@ const Influencer = ({ influencer }) => {
                     }
                 </div>
             </div>
-            <div className="redwine__influencer-instagram" id="instagram">
+            <div className="redwine__influencer-instagram" id="facebook">
                 <div className="title">
                     <h1>Our Top Facebook Influencer</h1>
 
@@ -263,7 +263,7 @@ const Influencer = ({ influencer }) => {
                 </Swiper>
             </div>
 
-            <div className="redwine__influencer-instagram" id="linkedin">
+            <div className="redwine__influencer-instagram" id="youtube">
                 <div className="title reverse">
                     <h1>Our Top Youtube Influencer</h1>
                 </div>

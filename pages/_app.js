@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "../redux";
 import { PersistGate } from "redux-persist/integration/react";
 import Head from "next/head";
+import { ScrollTo,Chat } from "../src";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -12,6 +13,8 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
+          <Chat />
+          <ScrollTo />
           <Component {...pageProps} />
         </PersistGate>
       </Provider>
