@@ -91,16 +91,25 @@ export const quickLinks = [
     },
 ]
 export const serviceLinks = [
+        
     {
-        name: "Social Media Marketing",
-        url: "social"
-    },
-    {
+        id: 0,
         name: "Youtube Marketing",
         url: "youtube"
     },
     {
-        name: "Software Development",
+        id: 1,
+        name: "Digital Marketing",
+        url: "social"
+    },
+    {
+        id: 2,
+        name: "Influencer Marketing",
+        url: "influencer"
+    },
+    {
+        id: 3,
+        name: "Website Development",
         url: "software"
     },
 ]

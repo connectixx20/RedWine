@@ -53,7 +53,7 @@ const defination = [
   {
     id: 8,
     title: "Website",
-    content: "refers to Barcode Entertainment (Barcode Experiential Marketing ), accessible from www.barcodeent.com"
+    content: "Website refers to Redwine Digital (Digital and Influencer Marketing), accessible from www.redwine.digital"
   },
   {
     id: 9,

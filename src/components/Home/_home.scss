@@ -110,7 +110,8 @@
           z-index: -1;
           margin: -$border; /* !importanté */
           border-radius: inherit; /* !importanté */
-          background: linear-gradient(to right, $primary-color, $dark-color);
+          
+          background: linear-gradient(to right, #f220ff, #ffed31);
         }
 
         img {
@@ -131,7 +132,7 @@
             // transition: all 0.8s ease-out;
             @include font2;
 
-            color: $primary-color;
+            color: #ef2c2c;
           }
           p {
             color: white;

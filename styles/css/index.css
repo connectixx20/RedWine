@@ -663,7 +663,7 @@ body::-webkit-scrollbar-thumb {
   z-index: -1;
   margin: -2px; /* !importanté */
   border-radius: inherit; /* !importanté */
-  background: linear-gradient(to right, #961313, black);
+  background: linear-gradient(to right, #f220ff, #ffed31);
 }
 .redwine__home-influencer .content__card img {
   border-radius: 1rem;
@@ -684,7 +684,7 @@ body::-webkit-scrollbar-thumb {
 }
 .redwine__home-influencer .content__card .inner h2 {
   font-family: "Noto Sans", sans-serif;
-  color: #961313;
+  color: #ef2c2c;
 }
 .redwine__home-influencer .content__card .inner p {
   color: white;
@@ -1721,4 +1721,10 @@ body::-webkit-scrollbar-thumb {
 .redwine__chat {
   left: 1rem;
   width: 7rem;
+}
+@media screen and (max-width: 750px) {
+  .redwine__chat {
+    left: 0.4rem;
+    bottom: 0.5rem;
+  }
 }/*# sourceMappingURL=index.css.map */

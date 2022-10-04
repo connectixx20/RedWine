@@ -87,7 +87,7 @@ const Navbar = () => {
                 },
                 {
                     id: 3,
-                    name: "Software Development",
+                    name: "Website Development",
                     link: "software"
                 },
             ]

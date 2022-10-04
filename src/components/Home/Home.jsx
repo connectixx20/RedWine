@@ -8,10 +8,10 @@ const Home = ({testimonial,influencer,companies}) => {
   return (
     <div className="redwine__home">
         <Intro />
-        <Company companies={companies} />
         <Influencer influencer={influencer} />
         <Services />
         <Testimonial testimonial={testimonial}  />
+        <Company companies={companies} />
     </div>
   )
 }

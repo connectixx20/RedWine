@@ -11,25 +11,25 @@ const Footer = () => {
             id: 0,
             name: "Instagram",
             icon: <AiFillInstagram />,
-            link: "https://instagram.com"
+            link: "https://instagram.com/redwinedigital?igshid=YmMyMTA2M2Y="
         },
         {
             id: 1,
             name: "Facebook",
             icon: <FaFacebookF />,
-            link: "https://facebook.com"
+            link: "https://www.facebook.com/redwinedigital1"
         },
         {
             id: 2,
             name: "Twitter",
             icon: <AiOutlineTwitter />,
-            link: "https://twitter.com"
+            link: "https://twitter.com/RedWineDigital1?t=beWqFeTD60nkOfOgy73u7g&s=09"
         },
         {
             id: 3,
             name: "LinkedIn",
             icon: <FaLinkedinIn />,
-            link: "https://linkedIn.com"
+            link: "https://www.linkedin.com/company/redwine-digital"
         },
     ]
     return (

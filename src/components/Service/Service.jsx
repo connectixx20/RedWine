@@ -26,7 +26,7 @@ const Service = ({ channel }) => {
                             <h2> <span style={{ fontSize: "2rem" }}>👉</span>  Influencer Marketing</h2>
                         </Link>
                         <Link href={"/services#software"}>
-                            <h2> <span style={{ fontSize: "2rem" }}>👉</span>  Software Developemnt</h2>
+                            <h2> <span style={{ fontSize: "2rem" }}>👉</span>  Website Developemnt</h2>
                         </Link>
                     </div>
 
