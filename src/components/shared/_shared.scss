@@ -28,7 +28,11 @@
 
     }
     &__scroll{
-      
+      right: 15px;
+
+      svg{
+        font-size: .9rem !important;
+      }
     }
   }
 }

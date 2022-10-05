@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import { motion } from 'framer-motion';
 import { ImageUrl } from '../../../../lib/client';
+import millify from 'millify';
 
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -42,7 +43,7 @@ const platformList = [
     },
 ]
 
-const Influencer = ({influencer}) => {
+const Influencer = ({ influencer }) => {
     const { winWidth } = useSelector(state => state.util)
 
 
@@ -66,7 +67,7 @@ const Influencer = ({influencer}) => {
             slidesPerView: 7
         }
     }
-    
+
     return (
         <div className="redwine__home-influencer">
             <div className="title">
@@ -92,15 +93,48 @@ const Influencer = ({influencer}) => {
                                 <Image {...ImageUrl(d.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d.name}</motion.h2>
-                                    <motion.p initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: .3, duration: 1 } }}>{d.platform}</motion.p>
+                                    <motion.p initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
+                                    <motion.div className="inner__link" initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .7 } }}>
+                                        {
+                                            d?.instagram && (
+                                                <a className="item" href={`https://instagram/${d.instagram}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/instagram.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.facebook && (
+                                                <a className="item" href={`https://facebook/${d.facebook}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/facebook.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.linkedin && (
+                                                <a className="item" href={`https://linkedin/in/${d.linkedin}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/linkedin.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.twiter && (
+                                                <a className="item" href={`https://twitter/${d.twiter}`} rel='noreferrer' target={"_blank"}>
+
+                                                    <img src="/icon/twitter.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                    </motion.div>
+
                                 </div>
+
                             </div>
 
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
-            <div className="redwine__influencer-platform" style={{display: winWidth< 1000 && "block",gridTemplateColumns: winWidth<1000 && "none",margin:0}}>
+            <div className="redwine__influencer-platform" style={{ display: winWidth < 1000 && "block", gridTemplateColumns: winWidth < 1000 && "none", margin: 0 }}>
 
                 {
                     platformList.map(item => winWidth > 1000 && (
@@ -111,11 +145,11 @@ const Influencer = ({influencer}) => {
                 }
                 {
                     winWidth < 1000 && (
-                        <Swiper slidesPerView={2} modules={[Pagination, Navigation, Autoplay]} breakpoints={{650:{slidesPerView:3}}}>
+                        <Swiper slidesPerView={2} modules={[Pagination, Navigation, Autoplay]} breakpoints={{ 650: { slidesPerView: 3 } }}>
                             {
                                 platformList.map(item => (
                                     <SwiperSlide key={item.id}>
-                                        <div className="redwine__influencer-platform__card" style={{margin:"1rem"}}>
+                                        <div className="redwine__influencer-platform__card" style={{ margin: "1rem" }}>
                                             <Image src={item.icon} width={winWidth < 600 ? 40 : 60} height={winWidth < 600 ? 40 : 60} objectFit="contain" loading="eager" />
                                         </div>
                                     </SwiperSlide>

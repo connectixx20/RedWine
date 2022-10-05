@@ -693,6 +693,19 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.8s ease-out;
   background: rgba(0, 0, 0, 0.3);
 }
+.redwine__home-influencer .content__card .inner__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.redwine__home-influencer .content__card .inner__link .item:not(:last-child) {
+  margin-right: 1rem;
+}
+.redwine__home-influencer .content__card .inner__link img {
+  width: 2.5rem;
+}
 .redwine__home-influencer .content__card:hover .inner {
   display: flex;
 }
@@ -1583,6 +1596,7 @@ body::-webkit-scrollbar-thumb {
   background-clip: padding-box; /* !importanté */
   border: solid 2px transparent; /* !importanté */
   border-radius: 1em;
+  background: linear-gradient(to right, #f220ff, #ffed31);
 }
 .redwine__influencer-instagram .content__card:before {
   content: "";
@@ -1623,6 +1637,19 @@ body::-webkit-scrollbar-thumb {
 .redwine__influencer-instagram .content__card .inner:hover {
   transition: all 0.8s ease-out;
   background: rgba(0, 0, 0, 0.3);
+}
+.redwine__influencer-instagram .content__card .inner__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: space-between;
+}
+.redwine__influencer-instagram .content__card .inner__link .item:not(:last-child) {
+  margin-right: 1rem;
+}
+.redwine__influencer-instagram .content__card .inner__link img {
+  width: 2.5rem;
 }
 .redwine__influencer-instagram .content__card:hover .inner {
   display: flex;
@@ -1726,5 +1753,11 @@ body::-webkit-scrollbar-thumb {
   .redwine__chat {
     left: 0.4rem;
     bottom: 0.5rem;
+  }
+  .redwine__scroll, .redwine__chat {
+    right: 15px;
+  }
+  .redwine__scroll svg, .redwine__chat svg {
+    font-size: 0.9rem !important;
   }
 }/*# sourceMappingURL=index.css.map */

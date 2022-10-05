@@ -125,12 +125,12 @@ const Influencer = ({ influencer }) => {
     const { winWidth } = useSelector(state => state.util)
 
 
-    const instaInfluencer = influencer?.filter((item) => item.platform === "Instagram")
-    const linkedinInfluencer = influencer?.filter((item) => item.platform === "LinkedIn")
-    const youtubeInfluencer = influencer?.filter((item) => item.platform === "Youtube")
-    const facebookInfluencer = influencer?.filter((item) => item.platform === "Facebook")
+    const instaInfluencer = influencer?.filter((item) => item.platform === "Instagram" || item?.platform === "All")
+    const linkedinInfluencer = influencer?.filter((item) => item.platform === "LinkedIn" || item?.platform === "All")
+    const youtubeInfluencer = influencer?.filter((item) => item.platform === "Youtube" || item?.platform === "All")
+    const facebookInfluencer = influencer?.filter((item) => item.platform === "Facebook" || item?.platform === "All")
 
-    
+
     return (
         <div className="redwine__influencer">
             <div className="redwine__influencer-intro">
@@ -181,7 +181,38 @@ const Influencer = ({ influencer }) => {
                                 <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
-                                    <motion.p  initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
+                                    <motion.p initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
+                                    <motion.div className="inner__link" initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .7 } }}>
+                                        {
+                                            d?.instagram && (
+                                                <a className="item" href={`https://instagram/${d.instagram}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/instagram.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.facebook && (
+                                                <a className="item" href={`https://facebook/${d.facebook}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/facebook.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.linkedin && (
+                                                <a className="item" href={`https://linkedin/in/${d.linkedin}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/linkedin.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.twiter && (
+                                                <a className="item" href={`https://twitter/${d.twiter}`} rel='noreferrer' target={"_blank"}>
+
+                                                    <img src="/icon/twitter.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                    </motion.div>
                                 </div>
                             </div>
 
@@ -209,7 +240,38 @@ const Influencer = ({ influencer }) => {
                                 <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
-                                    <motion.p  initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
+                                    <motion.p initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
+                                    <motion.div className="inner__link" initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .7 } }}>
+                                        {
+                                            d?.instagram && (
+                                                <a className="item" href={`https://instagram/${d.instagram}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/instagram.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.facebook && (
+                                                <a className="item" href={`https://facebook/${d.facebook}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/facebook.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.linkedin && (
+                                                <a className="item" href={`https://linkedin/in/${d.linkedin}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/linkedin.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.twiter && (
+                                                <a className="item" href={`https://twitter/${d.twiter}`} rel='noreferrer' target={"_blank"}>
+
+                                                    <img src="/icon/twitter.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                    </motion.div>
                                 </div>
                             </div>
 
@@ -255,7 +317,38 @@ const Influencer = ({ influencer }) => {
                                 <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
-                            <motion.p  initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
+                                    <motion.p initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
+                                    <motion.div className="inner__link" initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .7 } }}>
+                                        {
+                                            d?.instagram && (
+                                                <a className="item" href={`https://instagram/${d.instagram}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/instagram.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.facebook && (
+                                                <a className="item" href={`https://facebook/${d.facebook}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/facebook.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.linkedin && (
+                                                <a className="item" href={`https://linkedin/in/${d.linkedin}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/linkedin.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.twiter && (
+                                                <a className="item" href={`https://twitter/${d.twiter}`} rel='noreferrer' target={"_blank"}>
+
+                                                    <img src="/icon/twitter.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                    </motion.div>
                                 </div>
                             </div>
                         </SwiperSlide>
@@ -282,7 +375,38 @@ const Influencer = ({ influencer }) => {
                                 <Image {...ImageUrl(d?.image)} width={400} height={600} objectFit="cover" />
                                 <div className="inner">
                                     <motion.h2 initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .6 } }} >{d?.name}</motion.h2>
-                            <motion.p  initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
+                                    <motion.p initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .8 } }}>{millify(d?.follower)} </motion.p>
+                                    <motion.div className="inner__link" initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .7 } }}>
+                                        {
+                                            d?.instagram && (
+                                                <a className="item" href={`https://instagram/${d.instagram}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/instagram.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.facebook && (
+                                                <a className="item" href={`https://facebook/${d.facebook}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/facebook.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.linkedin && (
+                                                <a className="item" href={`https://linkedin/in/${d.linkedin}`} rel='noreferrer' target={"_blank"}>
+                                                    <img src="/icon/linkedin.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                        {
+                                            d?.twiter && (
+                                                <a className="item" href={`https://twitter/${d.twiter}`} rel='noreferrer' target={"_blank"}>
+
+                                                    <img src="/icon/twitter.png" alt="" />
+                                                </a>
+                                            )
+                                        }
+                                    </motion.div>
                                 </div>
                             </div>
                         </SwiperSlide>

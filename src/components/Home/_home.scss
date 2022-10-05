@@ -129,7 +129,6 @@
           font-size: 1.3rem;
           border-radius: 1rem;
           h2 {
-            // transition: all 0.8s ease-out;
             @include font2;
 
             color: #ef2c2c;
@@ -141,6 +140,20 @@
           &:hover {
             transition: all 0.8s ease-out;
             background: rgba($color: #000000, $alpha: 0.3);
+          }
+
+          &__link{
+            @include center_element;
+            margin-top: 1rem;
+            justify-content: space-between;
+            
+            .item:not(:last-child){
+              margin-right: 1rem;
+            }
+
+            img{
+              width: 2.5rem;
+            }
           }
         }
 
