@@ -211,6 +211,10 @@
 
   &-company{
     margin: 4rem 0;
+    margin-top: 8rem;
+    .title{
+      margin-bottom: 3rem
+    }
     .item{
       @include center_element;
 
@@ -239,7 +243,8 @@
 
       .swiper-button-prev,
       .swiper-button-next {
-        color: $primary-color;
+        // color: $primary-color;
+        color: white;
       }
 
       &-upper {
@@ -267,24 +272,21 @@
           }
         }
 
-        iframe {
-          border: 5px solid $primary-color;
-        }
       }
-
+      
       &-lower {
         margin-top: 3rem;
-
+        
         .card {
           cursor: pointer;
+          width: 100%;
+          iframe {
+            border: 5px solid $primary-color;
+            width: 100%;
+          }
         }
 
-        .card-show {
-          padding: 0.5rem;
-          color: $secondary-color;
-          border-radius: 4px;
-          background: $primary-color;
-        }
+        
       }
     }
     @media screen and (max-width: 1400px) {

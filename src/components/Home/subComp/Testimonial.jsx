@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Autoplay } from "swiper";
 import Image from "next/image";
 import { testimonialData as data } from "../../../../db/data";
-import { urlFor,ImageUrl } from "../../../../lib/client";
+import { urlFor, ImageUrl } from "../../../../lib/client";
 
-const Testimonial = ({testimonial}) => {
+const Testimonial = ({ testimonial }) => {
     const [width, setwidth] = useState(0);
     const [selectedData, setSelectedData] = useState(testimonial[0]);
 
@@ -16,34 +16,22 @@ const Testimonial = ({testimonial}) => {
 
 
     const breakpoints = {
-        350: {
+        900: {
             slidesPerView: 2,
-            spaceBetween: 10
+            spaceBetween: 20
         },
-        750: {
+        1600: {
             slidesPerView: 3,
-            spaceBetween: 20
-        },
-        1100: {
-            slidesPerView: 4,
-            spaceBetween: 20
-        },
-        1550: {
-            slidesPerView: 5,
             spaceBetween: 30
         },
-        2100: {
-            slidesPerView: 6,
-            spaceBetween: 50
-        },
-        2400: {
-            slidesPerView: 7,
-            spaceBetween: 100
+        2300: {
+            slidesPerView: 4,
+            spaceBetween: 30
         },
 
     }
 
-    console.log({testimonial})
+    console.log({ testimonial })
     return (
         <div className='redwine__home-testimonial'>
             <div className="title">
@@ -54,16 +42,16 @@ const Testimonial = ({testimonial}) => {
                 <div className="showcase"></div>
             </div>
             <div className="redwine__home-testimonial__content">
-                <div className="redwine__home-testimonial__content-upper">
-                    <motion.div className="title" initial={{x:-100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:1.4}} viewport={{once:true}}>
+                {/* <div className="redwine__home-testimonial__content-upper">
+                    <motion.div className="title" initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.4 }} viewport={{ once: true }}>
                         <h1>{selectedData?.name}</h1>
-                        <p style={{color:"#961313",fontWeight:"bold"}}>{selectedData?.company}</p>
+                        <p style={{ color: "#961313", fontWeight: "bold" }}>{selectedData?.company}</p>
                         <p>{selectedData?.content}</p>
                     </motion.div>
-                    <motion.div className="video" initial={{x:100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:1.4}} viewport={{once:true}}>
+                    <motion.div className="video" initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1.4 }} viewport={{ once: true }}>
                         <iframe width="560" height="315" src={`https://www.youtube.com/embed/${selectedData?.youtueb_url}`} title="YouTube video player" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </motion.div>
-                </div>
+                </div> */}
                 <div className="redwine__home-testimonial__content-lower">
                     <Swiper
                         slidesPerView={1}
@@ -76,13 +64,11 @@ const Testimonial = ({testimonial}) => {
                     >
                         {testimonial.map((d) => (
                             <SwiperSlide key={d.name} onClick={() => setSelectedData(d)} >
-                                <motion.div className={`card ${selectedData._id === d._id && "card-show"}`} >  
-                                    <Image {...ImageUrl(d.image)} width={300} height={200} objectFit="cover" />
-                                    <div className="card__title">
-                                        <h2>{d.name}</h2>
-                                        <p >{d.company}</p>
+                                <div className={`card`} >
+                                    <div className="video" >
+                                        <iframe width="560" height="315" src={`https://www.youtube.com/embed/${d.youtube_url}`} title="YouTube video player" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                                     </div>
-                                </motion.div>
+                                </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>

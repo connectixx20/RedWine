@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { ImageUrl } from '../../../../lib/client';
 import "swiper/css"
 import { useSelector } from 'react-redux';
+import { motion } from 'framer-motion';
 
 const Company = ({ companies }) => {
     const {winWidth}=useSelector(state=>state.util)
@@ -25,6 +26,13 @@ const Company = ({ companies }) => {
     }
     return (
         <div className="redwine__home-company">
+            <div className="title">
+                <div className="title__inner">
+                <h1>Companies We Worked With</h1>
+                    <motion.div className="line" initial={{ width: 0 }} whileInView={{ width: "100%" }} transition={{ duration: 1 }} viewport={{ once: true }} />
+                </div>
+                <div className="showcase"></div>
+            </div>
             <Swiper
                 slidesPerView={5}
                 spaceBetween={10}

@@ -751,6 +751,10 @@ body::-webkit-scrollbar-thumb {
 }
 .redwine__home-company {
   margin: 4rem 0;
+  margin-top: 8rem;
+}
+.redwine__home-company .title {
+  margin-bottom: 3rem;
 }
 .redwine__home-company .item {
   display: flex;
@@ -772,7 +776,7 @@ body::-webkit-scrollbar-thumb {
 }
 .redwine__home-testimonial__content .swiper-button-prev,
 .redwine__home-testimonial__content .swiper-button-next {
-  color: #961313;
+  color: white;
 }
 .redwine__home-testimonial__content-upper {
   display: flex;
@@ -800,20 +804,16 @@ body::-webkit-scrollbar-thumb {
     width: 100% !important;
   }
 }
-.redwine__home-testimonial__content-upper iframe {
-  border: 5px solid #961313;
-}
 .redwine__home-testimonial__content-lower {
   margin-top: 3rem;
 }
 .redwine__home-testimonial__content-lower .card {
   cursor: pointer;
+  width: 100%;
 }
-.redwine__home-testimonial__content-lower .card-show {
-  padding: 0.5rem;
-  color: #fff;
-  border-radius: 4px;
-  background: #961313;
+.redwine__home-testimonial__content-lower .card iframe {
+  border: 5px solid #961313;
+  width: 100%;
 }
 @media screen and (max-width: 1400px) {
   .redwine__home-testimonial {
