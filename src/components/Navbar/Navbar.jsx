@@ -120,16 +120,12 @@ const Navbar = () => {
         setShowMobMenu(item => !item)
         setItemDetail({ id: null })
     }
-
-
-    
     return (
         <>
             <header className="redwine__navbar" ref={headerRef} >
                 <div className="redwine__navbar-logo">
                     <Image src={"/logo.png"} width={winWidth < 850 ? 130 : 150} height={winWidth < 850 ? 80 : 100} objectFit="contain" loading="eager" />
                 </div>
-
                 <div className="redwine__navbar-content">
                     <div className="link" >
                         {
