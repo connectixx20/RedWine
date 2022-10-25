@@ -39,7 +39,7 @@ const Footer = () => {
                     <Image src={"/logo1.png"} width={150} height={90} objectFit="contain" />
                     <div className="detail__address">
                         <p>CRYSTAL PLAZA, New Link Rd, Phase D, Shastri Nagar,<br /> Andheri West, Andheri, Maharashtra 400053 </p>
-                        <p>info@redwine.digital <br />Redwinedigital16@gmail.com  </p>
+                        <p>info@redwine.digital <br />redwinedigital6@gmail.com  </p>
                         <p>+91 82689 49507 </p>
                     </div>
                 </div>

@@ -97,28 +97,28 @@ const Influencer = ({ influencer }) => {
                                     <motion.div className="inner__link" initial={{ y: 150, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { duration: .7 } }}>
                                         {
                                             d?.instagram && (
-                                                <a className="item" href={`https://instagram/${d.instagram}`} rel='noreferrer' target={"_blank"}>
+                                                <a className="item" href={`https://instagram.com/${d.instagram}/feed`} rel='noreferrer' target={"_blank"}>
                                                     <img src="/icon/instagram.png" alt="" />
                                                 </a>
                                             )
                                         }
                                         {
                                             d?.facebook && (
-                                                <a className="item" href={`https://facebook/${d.facebook}`} rel='noreferrer' target={"_blank"}>
+                                                <a className="item" href={`https://facebook.com/${d.facebook}`} rel='noreferrer' target={"_blank"}>
                                                     <img src="/icon/facebook.png" alt="" />
                                                 </a>
                                             )
                                         }
                                         {
                                             d?.linkedin && (
-                                                <a className="item" href={`https://linkedin/in/${d.linkedin}`} rel='noreferrer' target={"_blank"}>
+                                                <a className="item" href={`https://linkedin.com/in/${d.linkedin}`} rel='noreferrer' target={"_blank"}>
                                                     <img src="/icon/linkedin.png" alt="" />
                                                 </a>
                                             )
                                         }
                                         {
                                             d?.twiter && (
-                                                <a className="item" href={`https://twitter/${d.twiter}`} rel='noreferrer' target={"_blank"}>
+                                                <a className="item" href={`https://twitter.com/${d.twiter}`} rel='noreferrer' target={"_blank"}>
 
                                                     <img src="/icon/twitter.png" alt="" />
                                                 </a>
