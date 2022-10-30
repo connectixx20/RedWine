@@ -118,7 +118,8 @@ const First = () => {
                     {
                         platformList.map((item) => (
                             <div className={`content__item ${isPlatformItemExist(item.id, selectedPlatform) ? "active" : "false"}`} onClick={() => platformSelectHandler({ id: item.id, name: item.name })} key={item.name}>
-                                <Image src={item.icon} loading="eager" width={40} height={40} objectFit="contain" />
+                                
+                                <Image src={item.icon} loading="eager" width={35} height={35} objectFit="contain" />
                             </div>
                         ))
                     }
