@@ -576,8 +576,10 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-between;
 }
-.redwine__home-intro .detail h2 {
-  font-size: 2rem;
+.redwine__home-intro .detail h1 {
+  background-image: linear-gradient(to right bottom, #be046e, #b90055, #b0003e, #a40228, #961313);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .redwine__home-intro .detail p {
   margin: 2rem 0 5rem;
@@ -593,6 +595,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.3rem 1rem;
 }
 .redwine__home-intro .image img {
   width: 100% !important;
@@ -631,6 +634,7 @@ body::-webkit-scrollbar-thumb {
 .redwine__home .title .line {
   width: 100%;
   background: #961313;
+  background-image: radial-gradient(circle, #be04be, #ff0078, #ff5f2a, #f4af00, #a8eb12);
   height: 4px;
 }
 .redwine__home-influencer {
@@ -855,6 +859,7 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 1370px) {
   .redwine__home {
     padding: 6rem 2rem;
+    padding-top: 7rem;
   }
 }
 @media screen and (max-width: 800px) {

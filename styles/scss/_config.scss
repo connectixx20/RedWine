@@ -123,3 +123,19 @@ body::-webkit-scrollbar-thumb {
   font-style: normal;
   color: $primary-color;
 }
+
+@mixin border_decor {
+  border: 10px solid;
+  border-image-slice: 1;
+
+  border-image-source: linear-gradient(
+    to right top,
+    #be04be,
+    #ff0078,
+    #ff5f2a,
+    #f4af00,
+    #a8eb12
+  );
+  border-width: 3px;
+        border-radius: 3px;
+}
